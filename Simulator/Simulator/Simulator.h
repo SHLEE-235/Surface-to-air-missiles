@@ -1,4 +1,5 @@
 #include <thread>
+#include <memory>
 
 #include "LSRecvUDPManager.h"
 #include "MFRSendUDPManager.h"
@@ -8,11 +9,11 @@
 class Simulator
 {
 private:
-	LSRecvUDPManager *ls_recv_manager_ = nullptr;
-	MFRSendUDPManager *mfr_send_manager_ = nullptr;
+	std::unique_ptr<LSRecvUDPManager> ls_recv_manager_;
+	std::shared_ptr<MFRSendUDPManager> mfr_send_manager_;
 
-	MockTargetManager *mock_target_manager_ = nullptr;
-	MockMissileManager *mock_missile_manager_ = nullptr;
+	std::shared_ptr<MockTargetManager> mock_target_manager_;
+	std::unique_ptr<MockMissileManager> mock_missile_manager_;
 
 	std::thread recv_thread_;
 	std::thread flight_target_thread_;

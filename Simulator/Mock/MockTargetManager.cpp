@@ -4,7 +4,8 @@
 #include <sstream>
 
 // 생성자 수정: MFRSendUDPManager 포인터를 받도록 변경
-MockTargetManager::MockTargetManager(MFRSendUDPManager *mfr_send_manager) : mfr_send_manager_(mfr_send_manager)
+MockTargetManager::MockTargetManager(std::shared_ptr<MFRSendUDPManager> mfr_send_manager)
+	: mfr_send_manager_(mfr_send_manager)
 {
 	// Constructor implementation
 }
@@ -48,6 +49,7 @@ void MockTargetManager::RaedTargetIni()
 
 				// TargetInfo 객체 생성 및 데이터 설정
 				TargetInfo targetInfo;
+				targetInfo.mockType = 0;
 				targetInfo.id = id;
 				targetInfo.x = x;
 				targetInfo.y = y;
@@ -57,6 +59,7 @@ void MockTargetManager::RaedTargetIni()
 
 				// MockTarget 객체 생성 및 TargetInfo, MFRSendUDPManager 설정
 				std::shared_ptr<MockTarget> target = std::make_shared<MockTarget>(targetInfo, mfr_send_manager_);
+				std::cout << "add " << std::endl;
 
 				// 타겟 추가
 				addTarget(target);
@@ -90,6 +93,7 @@ void MockTargetManager::flitghtTarget()
 {
 	for (auto &target : targets)
 	{
+		std::cout << "update " << std::endl;
 		target->updatePos();
 	}
 }

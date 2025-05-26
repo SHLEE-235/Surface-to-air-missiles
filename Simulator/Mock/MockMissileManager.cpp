@@ -4,8 +4,11 @@
 #include "MockMissile.h"
 
 // 생성자 정의
-MockMissileManager::MockMissileManager(MockTargetManager *target_manager, MFRSendUDPManager *mfr_send_manager)
-	: mock_target_manager_(target_manager), mfr_send_manager_(mfr_send_manager) {}
+MockMissileManager::MockMissileManager(std::shared_ptr<MockTargetManager> target_manager,
+									   std::shared_ptr<MFRSendUDPManager> mfr_send_manager)
+	: mock_target_manager_(target_manager), mfr_send_manager_(mfr_send_manager)
+{
+}
 
 // 미사일 ID 업데이트
 void MockMissileManager::updateMissileID()
@@ -20,6 +23,7 @@ void MockMissileManager::updateMissileID()
 	last_missile_id_++;
 
 	// 식별자 100을 앞에 추가하여 ID 생성
+	last_missile_info_.mockType = 1;
 	last_missile_info_.id = 102 * 1000 + last_missile_id_;
 }
 
@@ -33,6 +37,8 @@ void MockMissileManager::flightMissile(const MissileInfo &MissileInfo)
 		std::cout << "Missile is already in flight." << std::endl;
 		return;
 	}
+
+	std::cout << "Missile flight success." << std::endl;
 
 	is_flight_ = true;
 

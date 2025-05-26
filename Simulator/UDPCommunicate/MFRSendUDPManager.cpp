@@ -53,7 +53,7 @@ bool MFRSendUDPManager::sendData(const char *data, int dataSize)
 		return false;
 	}
 
-	std::cout << "sendData: Sent " << sent_bytes << " bytes to "
+	std::cout << "missile sendData: Sent " << sent_bytes << " bytes to "
 			  << inet_ntoa(client_addr_.sin_addr) << ":" << ntohs(client_addr_.sin_port) << std::endl;
 	return true;
 }

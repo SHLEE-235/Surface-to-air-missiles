@@ -29,32 +29,32 @@ Simulator::~Simulator()
 bool Simulator::init()
 {
 	// Constructor implementation
-	ls_recv_manager_ = new LSRecvUDPManager();
-	mfr_send_manager_ = new MFRSendUDPManager();
+	ls_recv_manager_ = std::make_unique<LSRecvUDPManager>();
+	mfr_send_manager_ = std::make_shared<MFRSendUDPManager>();
 	if (!ls_recv_manager_ || !mfr_send_manager_)
 	{
 		std::cerr << "Failed to allocate memory for LSRecvUDPManager or MFRSendUDPManager." << std::endl;
 		return false;
 	}
 
-	if (!ls_recv_manager_->LSSocketOpen(3000))
+	if (!ls_recv_manager_->LSSocketOpen(3001))
 	{
 		std::cerr << "Failed to initialize ls_recv_manager socket." << std::endl;
 		return false;
 	}
 
-	if (!mfr_send_manager_->MFRSocketOpen("192.168.1.35", 9000))
+	if (!mfr_send_manager_->MFRSocketOpen("192.168.2.176", 9000))
 	{
 		std::cerr << "Failed to initialize mfr_send_manager socket." << std::endl;
 		return false;
 	}
 
 	// Initialize the mock target manager
-	mock_target_manager_ = new MockTargetManager(mfr_send_manager_);
+	mock_target_manager_ = std::make_shared<MockTargetManager>(mfr_send_manager_);
 	mock_target_manager_->RaedTargetIni();
 
 	// Initialize the mock missile
-	mock_missile_manager_ = new MockMissileManager(mock_target_manager_, mfr_send_manager_);
+	mock_missile_manager_ = std::make_unique<MockMissileManager>(mock_target_manager_, mfr_send_manager_);
 
 	return true;
 }
@@ -76,29 +76,22 @@ void Simulator::start()
 							// Latitude (long long)
 							if (offset + sizeof(long long) <= sizeof(buffer))
 							{
-								std::memcpy(&received_data.x, buffer + offset, sizeof(float));
-								offset += sizeof(float);
+								std::memcpy(&received_data.x, buffer + offset, sizeof(long long));
+								offset += sizeof(long long);
 							}
 
 							// Longitude (long long)
 							if (offset + sizeof(long long) <= sizeof(buffer))
 							{
-								std::memcpy(&received_data.y, buffer + offset, sizeof(float));
-								offset += sizeof(float);
+								std::memcpy(&received_data.y, buffer + offset, sizeof(long long));
+								offset += sizeof(long long);
 							}
 
 							// Altitude (z, long long)
 							if (offset + sizeof(long long) <= sizeof(buffer))
 							{
-								std::memcpy(&received_data.z, buffer + offset, sizeof(float));
-								offset += sizeof(float);
-							}
-
-							// Angle (double)
-							if (offset + sizeof(double) <= sizeof(buffer))
-							{
-								std::memcpy(&received_data.angle, buffer + offset, sizeof(float));
-								offset += sizeof(float);
+								std::memcpy(&received_data.z, buffer + offset, sizeof(long long));
+								offset += sizeof(long long);
 							}
 
 							// Speed (int)
@@ -107,10 +100,20 @@ void Simulator::start()
 								std::memcpy(&received_data.speed, buffer + offset, sizeof(int));
 								offset += sizeof(int);
 							}
+
+							// Angle (double)
+							if (offset + sizeof(double) <= sizeof(buffer))
+							{
+								std::memcpy(&received_data.angle, buffer + offset, sizeof(double));
+								offset += sizeof(double);
+							}
+
+							std::cout << "offset size : " << offset << std::endl;
 						}
 
 						// LaunchData 구조체 출력
-                        std::cout << "Received LaunchData:" << std::endl;
+						std::cout
+							<< "Received LaunchData:" << std::endl;
 						std::cout << "  ID: " << received_data.id << std::endl;
                         std::cout << "  Latitude: " << received_data.x << std::endl;
                         std::cout << "  Longitude: " << received_data.y << std::endl;

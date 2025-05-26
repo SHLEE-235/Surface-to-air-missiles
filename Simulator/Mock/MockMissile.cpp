@@ -2,10 +2,11 @@
 #include <thread>
 #include <iostream>
 #include <cstring>
+#include <memory>
 
 #include "MockMissile.h"
 
-MockMissile::MockMissile(const MissileInfo &missile_info, MFRSendUDPManager *mfr_send_manager)
+MockMissile::MockMissile(const MissileInfo &missile_info, std::shared_ptr<MFRSendUDPManager> mfr_send_manager)
 	: missile_info_(missile_info), mfr_send_manager_(mfr_send_manager) {}
 
 void MockMissile::updatePosMissile()
@@ -31,5 +32,5 @@ void MockMissile::sendData()
 	char buffer[1024];
 	std::memcpy(buffer, &missile_info_, sizeof(missile_info_));
 	mfr_send_manager_->sendData(buffer, sizeof(missile_info_));
-	std::cout << "Missile data sent." << std::endl;
+	// std::cout << "Missile data sent." << std::endl;
 }

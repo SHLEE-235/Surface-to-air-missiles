@@ -12,7 +12,7 @@
 class MockTargetManager
 {
 public:
-	MockTargetManager(MFRSendUDPManager *mfr_send_manager); // 생성자 수정
+	MockTargetManager(std::shared_ptr<MFRSendUDPManager> mfr_send_manager); // 생성자 수정
 	~MockTargetManager();
 
 	void RaedTargetIni();
@@ -21,7 +21,7 @@ public:
 
 private:
 	std::vector<std::shared_ptr<MockTarget>> targets;
-	MFRSendUDPManager *mfr_send_manager_; // MFRSendUDPManager 추가
+	std::shared_ptr<MFRSendUDPManager> mfr_send_manager_; // MFRSendUDPManager 추가
 };
 
 #endif

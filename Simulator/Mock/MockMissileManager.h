@@ -10,8 +10,8 @@
 class MockMissileManager
 {
 private:
-	MockTargetManager *mock_target_manager_;
-	MFRSendUDPManager *mfr_send_manager_;
+	std::shared_ptr<MockTargetManager> mock_target_manager_;
+	std::shared_ptr<MFRSendUDPManager> mfr_send_manager_;
 
 	bool is_flight_ = false;
 	std::thread flight_thread_;
@@ -23,7 +23,7 @@ private:
 
 public:
 	// 생성자 선언 (정의 제거)
-	MockMissileManager(MockTargetManager *target_manager, MFRSendUDPManager *mfr_send_manager);
+	MockMissileManager(std::shared_ptr<MockTargetManager> target_manager, std::shared_ptr<MFRSendUDPManager> mfr_send_manager);
 
 	// 비행 미사일 관리 함수
 	void flightMissile(const MissileInfo &MissileInfo);

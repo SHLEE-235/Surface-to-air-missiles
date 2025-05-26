@@ -19,7 +19,7 @@ struct LaunchData
 int main()
 {
 	const char *server_ip = "127.0.0.1"; // 서버 IP (로컬호스트)
-	const int server_port = 3000;		 // 서버 포트
+	const int server_port = 3001;		 // 서버 포트
 
 	// 송신할 데이터 초기화
 	LaunchData data;

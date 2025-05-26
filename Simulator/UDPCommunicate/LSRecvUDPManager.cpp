@@ -88,11 +88,12 @@ bool LSRecvUDPManager::receiveData(char *buffer, int bufferSize)
 			return false;
 		}
 	}
-	// else
-	// {
-	// 	buffer[recv_len_] = '\0'; // Null-terminate the received data
-	// 	std::cout << "Received data: " << buffer << std::endl;
-	// }
+	else
+	{
+		std::cout << "ls udp size : " << recv_len_ << std::endl;
+		buffer[recv_len_] = '\0'; // Null-terminate the received data
+		std::cout << "Received data: " << buffer << std::endl;
+	}
 
 	return true;
 }
