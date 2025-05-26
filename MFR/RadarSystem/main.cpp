@@ -1,6 +1,7 @@
 #include "Mfr.hpp"
 #include <thread>
 
+using namespace std;
 
 int main() 
 {
@@ -8,10 +9,11 @@ int main()
     
     mfr.startTcp();
     mfr.startUdp();
+    mfr.startMfrStatusSender();
 
     while (true) 
     {
-        std::this_thread::sleep_for(std::chrono::seconds(1));
+        this_thread::sleep_for(chrono::seconds(1));
     }
 
     return 0;

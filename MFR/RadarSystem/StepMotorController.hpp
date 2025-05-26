@@ -1,7 +1,9 @@
 #pragma once
 
+#include <iostream>
+
 class StepMotorController {
-public:
+private:
     float targetRps;
     int stepsPerRev;
     float stepsPerAngle;
@@ -10,13 +12,7 @@ public:
     float pulseIntervalUs;
     float totalPulse;
 
-    void runSpeedMode() 
-    {
-
-    }
-
-    void runAngleMode(double angle) 
-    {
-
-    }
+public:
+    void runSpeedMode(int speed);
+    void runAngleMode(double angle);
 };

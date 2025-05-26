@@ -1,7 +1,5 @@
 #pragma once
 
-#include "MockTarget.hpp"
-#include "MockMissile.hpp"
 #include "StepMotorController.hpp"
 #include "MfrLcCommManager.hpp"
 #include "MfrSimCommManager.hpp"
@@ -23,12 +21,13 @@ private:
     int mfrMode;
     double targetMotorAngle;
 
+    MfrStatus mfrStatus;
     StepMotorController stepMotorManager;
     MfrLcCommManager lcCommManager;
     MfrSimCommManager simCommManager;
 
     std::vector<MockTarget> mockTargets;
-    std::vector<MockMissile> mockMissile;
+    std::vector<MockMissile> mockMissile;   // shared ptr
 
 public:
     Mfr();
@@ -38,8 +37,8 @@ public:
 
     void sendToLc(const std::vector<char>& packet);
     std::vector<MockTarget*> MfrDetectionAlgo();
-    void controlMotor(int mode, double targetAngle);
-    void recvData(const std::vector<char>& packet) override;
+    
+    void callBackData(const std::vector<char>& packet) override;
 
     void handleSimDataPayload(const std::vector<char>& packet);
 
@@ -52,4 +51,12 @@ public:
     MockMissile* getMockMissileById(unsigned int id);
     void removeMockMissileById(unsigned int id);
     void clearMockMissiles();
+
+    void manageMfrStatus();
+
+    void controlMotor(const std::vector<char>& payload);
+    std::pair<uint8_t, float> motorDataParser(const std::vector<char>& payload);
+
+    std::vector<char> serializeMfrStatus(const MfrStatus& status);
+    void startMfrStatusSender();
 };

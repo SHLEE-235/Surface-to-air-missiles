@@ -1,4 +1,3 @@
-// MfrSimCommManager.cpp
 #include "MfrSimCommManager.hpp"
 #include "PacketProtocol.hpp"
 #include <sys/socket.h>
@@ -16,21 +15,13 @@ void MfrSimCommManager::setReceiver(IReceiver* recv)
     receiver = recv;
 }
 
-void MfrSimCommManager::recv(const std::vector<char>& packet) 
+bool MfrSimCommManager::connectToSim()
 {
-    if (receiver) 
-    {
-        receiver->recvData(packet);
-    }
-}
-
-void MfrSimCommManager::startUdpReceiver()
-{
-    int sockfd = socket(AF_INET, SOCK_DGRAM, 0);
+    sockfd = socket(AF_INET, SOCK_DGRAM, 0);
     if (sockfd < 0) 
     {
         perror("UDP 소켓 생성 실패");
-        return;
+        return false;
     }
 
     sockaddr_in serverAddr{};
@@ -42,19 +33,32 @@ void MfrSimCommManager::startUdpReceiver()
     {
         perror("UDP bind 실패");
         close(sockfd);
-        return;
+        return false;
     }
 
-    std::cout << "[SimComm] UDP 수신 대기 중 (port " << SIM_UDP_PORT << ")..." << std::endl;
+    return true;
+}
 
-    std::thread([=]() {
+void MfrSimCommManager::recv(const std::vector<char>& packet) 
+{
+    if (receiver) 
+    {
+        receiver->callBackData(packet);
+    }
+}
+
+void MfrSimCommManager::startUdpReceiver()
+{
+    std::cout << "[ MfrSimCommManager::startUdpReceiver] UDP 수신 대기 중 (port " << SIM_UDP_PORT << ")..." << std::endl;
+
+    std::thread([this]() {
         char buffer[BUFFER_SIZE];
 
         while (true) 
         {
             sockaddr_in clientAddr{};
             socklen_t addrLen = sizeof(clientAddr);
-            ssize_t len = recvfrom(sockfd, buffer, BUFFER_SIZE, 0, (struct sockaddr*)&clientAddr, &addrLen);
+            ssize_t len = recvfrom(this->sockfd, buffer, BUFFER_SIZE, 0, (struct sockaddr*)&clientAddr, &addrLen);
 
             if (len > 0) 
             {
@@ -66,7 +70,7 @@ void MfrSimCommManager::startUdpReceiver()
                     if (receiver) 
                     {
                         std::vector<char> packet(buffer, buffer + len);
-                        receiver->recvData(packet);
+                        this->receiver->callBackData(packet);
                     }
                     else
                     {
@@ -79,7 +83,5 @@ void MfrSimCommManager::startUdpReceiver()
                 }
             }
         }
-
-        close(sockfd);
     }).detach();
 }

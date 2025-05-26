@@ -10,6 +10,7 @@ set(SOURCES
     Mfr.cpp
     MfrLcCommManager.cpp
     MfrSimCommManager.cpp
+    StepMotorController.cpp
 )
 
 # 실행 파일 생성

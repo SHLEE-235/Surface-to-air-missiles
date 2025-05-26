@@ -4,6 +4,6 @@
 class IReceiver
 {
 public:
-    virtual void recvData(const std::vector<char>& packet) = 0;
+    virtual void callBackData(const std::vector<char>& packet) = 0;
     virtual ~IReceiver() = default;
 };
