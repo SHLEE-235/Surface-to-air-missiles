@@ -4,13 +4,15 @@
 
 class MfrLcCommManager {
 private:
+    const unsigned int mfrId = 1;
     int sockfd;
     IReceiver* receiver;
 
 public:
-    MfrLcCommManager(IReceiver* receiver = nullptr);
-    bool connectToLc();
-    void startTcpReceiver();
+    MfrLcCommManager(IReceiver* receiver);
     void send(const std::vector<char>& packet);
-    void recvLoop();
+private:
+    void initMfrLcCommManager();
+    bool connectToLc();
+    void startTcpReceiver();    
 };

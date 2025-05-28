@@ -8,9 +8,9 @@ private:
     IReceiver* receiver;
 
 public:
-    MfrSimCommManager(IReceiver* recv = nullptr) : receiver(recv) {}    
+    MfrSimCommManager(IReceiver* receiver);
+private:
+    void initMfrSimCommManager();
     bool connectToSim();
     void startUdpReceiver();
-    void recv(const std::vector<char>& packet);
-    void setReceiver(IReceiver* recv);
 };

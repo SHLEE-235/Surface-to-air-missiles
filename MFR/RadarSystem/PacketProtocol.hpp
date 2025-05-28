@@ -4,64 +4,97 @@
 
 struct PacketHeader 
 {
-    uint8_t cmdType;
+    unsigned char cmdType;
 };
 
-struct Pos2D
+struct Pos2D 
 {
     long long x;
     long long y;
 };
 
-struct SimData 
+struct Pos3D
 {
-    uint32_t mockId;
-    float x;
-    float y;
-    float z;
-    float angle;
+    long long x;
+    long long y;
+    long long z;
+};
+
+struct SimData // 4 + (8*3) + 4 + 8 = 40 bytes
+{
+    unsigned int mockId;
+    Pos3D mockCoords;
     int speed;
+    double angle;    
 };
 
-enum PacketType : uint8_t 
+struct MfrToLcMissileInfo   // 4 + (8*3) + 4 + 8 + 8 + 8 + 1 = 57 bytes
 {
-    SIM_TARGET_DATA = 0,
-    SIM_MISSILE_DATA = 1,
-    STATUS_REQ = 0x02,
-    STATUS_RESP = 0x03,
-    MODE_CHANGE = 0x04
+    unsigned int id;
+    Pos3D missileCoords;
+    int missileSpeed;
+    double missileAngle;
+    unsigned long long firstDetectionTime;
+    unsigned long long timeToIntercept;
+    bool isHit;
 };
 
-enum RadarMode : uint8_t
+struct MfrToLcTargetInfo    // 4 + (8*3) + 4 + 8 + 8 + 1 + 1 = 50 bytes
+{
+    unsigned int id;       
+    Pos3D targetCoords;
+    int targetSpeed;
+    double targetAngle;
+    unsigned long long firstDetectionTime;
+    unsigned char prioirty;
+    bool isHit;
+};
+
+
+enum recvPacketType : uint8_t
+{
+    SIM_MOCK_DATA = 0x01,
+    STATUS_REQ = 0x11,
+    MODE_CHANGE = 0x12,
+    LC_INIT_RES = 0x13
+};
+
+enum sendPacketType : uint8_t 
+{
+    STATUS_RES = 0x21,
+    DETECTED_INFO = 0x22,
+    LC_INIT_REQ = 0x23
+};
+
+enum RadarMode : uint8_t 
 {
     ROTATION_MODE = 0,
     ANGLE_MODE
 };
 
-struct MfrStatus
+struct MfrStatus 
 {
-    uint8_t radarId;
+    unsigned int radarId;
     Pos2D radarPos;
     RadarMode radarMode;
-    float radarAngle;    
+    double radarAngle;    
 };
 
-struct MockTarget {
-    unsigned int id;
-    float targetX;
-    float targetY;
-    float targetZ;
-    float targetAngle;
-    int targetSpeed;    
+struct LcInitData
+{
+    unsigned int radarId;
+    Pos2D lcCoord;
 };
 
-#pragma once
+struct ReqLcInitData
+{
+    unsigned int radarId;
+};
 
-struct MockMissile {
-    unsigned int id;
-    float missileX;
-    float missileY;
-    float missileZ;
-    float missileAngle;
-    int missileSpeed;    
+struct ModeCahngeData
+{
+    unsigned int radarId;
+    unsigned char modeData;
+    unsigned char isPriorityMode;
+    unsigned int targetId;
 };

@@ -5,15 +5,11 @@ using namespace std;
 
 int main() 
 {
-    Mfr mfr;
+    Mfr mfr;    
     
-    mfr.startTcp();
-    mfr.startUdp();
-    mfr.startMfrStatusSender();
-
     while (true) 
     {
-        this_thread::sleep_for(chrono::seconds(1));
+        this_thread::sleep_for(chrono::milliseconds(1));
     }
 
     return 0;

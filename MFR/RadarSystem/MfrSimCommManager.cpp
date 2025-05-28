@@ -10,9 +10,18 @@
 #define SIM_UDP_PORT 9000
 #define BUFFER_SIZE 1024
 
-void MfrSimCommManager::setReceiver(IReceiver* recv) 
+MfrSimCommManager::MfrSimCommManager(IReceiver* receiver) : receiver(receiver), sockfd(-1) 
 {
-    receiver = recv;
+    initMfrSimCommManager();
+}
+
+void MfrSimCommManager::initMfrSimCommManager()
+{
+    std::cout << "[Mfr::startUdp] UDP 통신 수신 시작" << "\n";
+    if (connectToSim()) 
+    {
+        startUdpReceiver();        
+    }
 }
 
 bool MfrSimCommManager::connectToSim()
@@ -39,47 +48,38 @@ bool MfrSimCommManager::connectToSim()
     return true;
 }
 
-void MfrSimCommManager::recv(const std::vector<char>& packet) 
-{
-    if (receiver) 
-    {
-        receiver->callBackData(packet);
-    }
-}
-
 void MfrSimCommManager::startUdpReceiver()
 {
-    std::cout << "[ MfrSimCommManager::startUdpReceiver] UDP 수신 대기 중 (port " << SIM_UDP_PORT << ")..." << std::endl;
-
     std::thread([this]() {
         char buffer[BUFFER_SIZE];
+        
+        std::cout << "[MfrSimCommManager::startUdpReceiver] UdpReceiver 스레드 시작" << std::endl;
 
         while (true) 
         {
+            //std::cout << "SIMDATA SIZE: " << sizeof(SimData) << std::endl;
             sockaddr_in clientAddr{};
             socklen_t addrLen = sizeof(clientAddr);
             ssize_t len = recvfrom(this->sockfd, buffer, BUFFER_SIZE, 0, (struct sockaddr*)&clientAddr, &addrLen);
-
             if (len > 0) 
             {
                 if (len == sizeof(uint8_t) + sizeof(SimData)) 
                 {
                     SimData data;
-                    std::memcpy(&data, buffer, sizeof(SimData));
-
-                    if (receiver) 
+                    std::memcpy(&data, buffer + 1, sizeof(SimData)); // +1로 수정
+                    if (this->receiver != nullptr) 
                     {
                         std::vector<char> packet(buffer, buffer + len);
-                        this->receiver->callBackData(packet);
+                        receiver->callBackData(packet);
                     }
                     else
                     {
-                        std::cout << "receiver null" << "\n";
+                        std::cout << "[MfrSimCommManager::startUdpReceiver] receiver null" << "\n";
                     }
                 }
                 else
                 {
-                    std::cerr << "[경고] 예상하지 못한 패킷 크기 (" << len << " bytes)" << std::endl;
+                    std::cerr << "패킷 크기 이상 (" << len << " bytes)" << std::endl;
                 }
             }
         }
