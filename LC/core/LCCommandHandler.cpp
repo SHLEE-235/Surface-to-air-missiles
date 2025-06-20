@@ -13,19 +13,6 @@ namespace LCCommandHandler
     using namespace Common;
     using namespace GeolocationConverter;
 
-    Eigen::Matrix3d enu_to_ecef_rotation(double lat, double lon)
-    {
-        double sinLat = std::sin(lat);
-        double cosLat = std::cos(lat);
-        double sinLon = std::sin(lon);
-        double cosLon = std::cos(lon);
-
-        Eigen::Matrix3d R;
-        R << -sinLon,              cosLon,             0,
-            -sinLat*cosLon,     -sinLat*sinLon,      cosLat,
-            cosLat*cosLon,      cosLat*sinLon,      sinLat;
-        return R;
-    }
     // ECC 명령 처리    
     void handleECCCommand(const CommonMessage &msg, LCManager &manager)
     {
@@ -647,7 +634,10 @@ namespace LCCommandHandler
             double sin_lon = std::sin(degreesToRadians(tg_lon_deg_initial));
             double cos_lon = std::cos(degreesToRadians(tg_lon_deg_initial));
 
-            Eigen::Matrix3d R_enu_to_ecef = enu_to_ecef_rotation(degreesToRadians(tg_lat_deg_initial), degreesToRadians(tg_lon_deg_initial));
+            Eigen::Matrix3d R_enu_to_ecef;
+            R_enu_to_ecef << -sin_lon, -sin_lat * cos_lon, cos_lat * cos_lon,
+                            cos_lon, -sin_lat * sin_lon, cos_lat * sin_lon,
+                            0,        cos_lat,            sin_lat;
             Eigen::Vector3d vel_ecef = R_enu_to_ecef * vel_enu;
             std::cout << "[DEBUG] 타겟 속도 ECEF: " << vel_ecef.transpose() << "\n";
             std::cout << "[DEBUG] 발사 → 타겟 초기 방향 벡터: " << (tg_ecef_initial - launch_ecef).normalized().transpose() << "\n";
