@@ -3,7 +3,7 @@
 #include "CommonMessage.h"
 #include "SenderType.h"
 #include <memory>
-#include "ENU_Translator.hpp"
+#include "timeTrans.h"
 class LCManager;
 
 namespace LCCommandHandler {

@@ -53,6 +53,8 @@ struct LCStatus
     unsigned int LCId = 0;
     Pos2D position;
     long long height;
+
+    unsigned long long calculated_time;
 };
 
 struct MissileStatus

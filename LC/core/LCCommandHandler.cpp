@@ -201,14 +201,19 @@ namespace LCCommandHandler
                 cmd.start_y = static_cast<long long>(
                     (std::sin(cmd.launchAngleXY * M_PI / 180.0) * missileSpeed * (elapsed.count() + 0.15) * 0.001 / (111.32 * std::cos(lat_deg * M_PI / 180.0))) * 1e7
                         + snapshot.ls.position.y);
-
                 cmd.start_z = static_cast<long long>(snapshot.ls.height);
-            } else {
+                TimeStamp now_ms = getCurrentTimeMillis();
+                TimeStamp intercept_time_ms = static_cast<TimeStamp>(now_ms + (bestTime - elapsed.count()) * 1000.0);
+
+                manager.updateCalTime(intercept_time_ms);
+            }
+            else {
                 cmd.launchAngleXY = initial_bearing;
                 cmd.launchAngleXZ = 0.0;
                 cmd.start_x = 0;
                 cmd.start_y = 0;
                 cmd.start_z = 0;
+                manager.updateCalTime(0);
                 std::cerr << "[LC] 요격 불가: fallback 각도 적용 → " << initial_bearing << " 도\n";
             }
 

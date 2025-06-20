@@ -55,7 +55,7 @@ std::vector<uint8_t> Serializer::serializeStatusResponse(const SystemStatus& sta
         buf.insert(buf.end(), reinterpret_cast<const uint8_t*>(&m.altitude), reinterpret_cast<const uint8_t*>(&m.altitude) + 8);
         buf.insert(buf.end(), reinterpret_cast<const uint8_t*>(&m.speed), reinterpret_cast<const uint8_t*>(&m.speed) + 4);
         buf.insert(buf.end(), reinterpret_cast<const uint8_t*>(&m.angle), reinterpret_cast<const uint8_t*>(&m.angle) + 8);
-        buf.insert(buf.end(), reinterpret_cast<const uint8_t*>(&m.detectTime), reinterpret_cast<const uint8_t*>(&m.detectTime) + 8);
+        buf.insert(buf.end(), reinterpret_cast<const uint8_t*>(&status.lc.calculated_time), reinterpret_cast<const uint8_t*>(&status.lc.calculated_time) + 8);
         buf.insert(buf.end(), reinterpret_cast<const uint8_t*>(&m.interceptTime), reinterpret_cast<const uint8_t*>(&m.interceptTime) + 8);
         buf.push_back(static_cast<uint8_t>(m.hit));
     }
@@ -69,8 +69,8 @@ std::vector<uint8_t> Serializer::serializeStatusResponse(const SystemStatus& sta
         buf.insert(buf.end(), reinterpret_cast<const uint8_t*>(&t.speed), reinterpret_cast<const uint8_t*>(&t.speed) + 4);
         buf.insert(buf.end(), reinterpret_cast<const uint8_t*>(&t.angle1), reinterpret_cast<const uint8_t*>(&t.angle1) + 8);
         buf.insert(buf.end(), reinterpret_cast<const uint8_t*>(&t.angle2), reinterpret_cast<const uint8_t*>(&t.angle2) + 8);
-        buf.insert(buf.end(), reinterpret_cast<const uint8_t*>(&t.detectTime), reinterpret_cast<const uint8_t*>(&t.detectTime) + 8);
         buf.push_back(t.priority);
+        buf.insert(buf.end(), reinterpret_cast<const uint8_t*>(&t.detectTime), reinterpret_cast<const uint8_t*>(&t.detectTime) + 8);
         buf.push_back(static_cast<uint8_t>(t.hit));
     }
 

@@ -6,7 +6,8 @@ SystemStatus loadSystemStatus(const std::string& iniPath) {
     INIReader reader(iniPath);
     SystemStatus status;
 
-    if (reader.ParseError() < 0) {
+    if (reader.ParseError() < 0)
+    {
         std::cerr << "[ERROR] " << iniPath << " 불러오기 실패\n";
         return status;
     }
@@ -27,7 +28,8 @@ SystemStatus loadSystemStatus(const std::string& iniPath) {
     status.lc.position.x = reader.GetInteger("LC", "posX", 0);
     status.lc.position.y = reader.GetInteger("LC", "posY", 0);
 
-    for (int i = 0; i < 2; ++i) {
+    for (int i = 0; i < 2; ++i)
+    {
         std::string section = "Missile_" + std::to_string(i);
         if (!reader.HasSection(section)) break;
 
@@ -45,7 +47,8 @@ SystemStatus loadSystemStatus(const std::string& iniPath) {
         status.missiles.push_back(m);
     }
 
-    for (int i = 0; i < 50; ++i) {
+    for (int i = 0; i < 50; ++i)
+    {
         std::string section = "Target_" + std::to_string(i);
         if (!reader.HasSection(section)) break;
 

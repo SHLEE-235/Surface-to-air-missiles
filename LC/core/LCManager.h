@@ -12,7 +12,7 @@
 #include <functional>
 #include <vector>
 #include "SerialLS.h"
-
+#include "timeTrans.h"
 class LCManager : public IReceiverCallback {
 private:
     SystemStatus status;
@@ -66,6 +66,7 @@ public:
     void updateStatus(const LCStatus& lc);
     void updateStatus(const std::vector<MissileStatus>& missiles);
     void updateStatus(const std::vector<TargetStatus>& targets);
+    void updateCalTime(const unsigned long long& calTime);
     void sendLCPositionToMFR();
     void onLSStatusReceived(const Common::LSReport& ls);
 

@@ -16,6 +16,7 @@
 #include <iomanip>
 #include "LCCommandHandler.h"
 #include "LCConfig.h"
+#include <chrono>
 
 void LCManager::run()
 {
@@ -331,6 +332,7 @@ void LCManager::initialize(const std::string &iniPath)
         s.lc.LCId = reader.GetInteger("LC", "commandReady", 0);
         s.lc.position.x = reader.GetLongLong("LC", "posX", 0);
         s.lc.position.y = reader.GetLongLong("LC", "posY", 0);
+        s.lc.calculated_time = getCurrentTimeMillis();
         std::cout << "[DEBUG][LC] LCId=" << s.lc.LCId
                   << ", posX=" << s.lc.position.x
                   << ", posY=" << s.lc.position.y << std::endl;
@@ -443,6 +445,11 @@ TargetStatus *LCManager::findTargetById(std::vector<TargetStatus> &targets, unsi
             return &t;
     }
     return nullptr;
+}
+
+void LCManager::updateCalTime(const unsigned long long& calTime)
+{
+    status.lc.calculated_time = calTime;
 }
 
 void LCManager::printStatus(const SystemStatus &status)
