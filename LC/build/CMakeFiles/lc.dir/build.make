@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/user/nex1/Surface-to-air-missiles/LC
+CMAKE_SOURCE_DIR = /home/nexuskang/FinalProject/Surface-to-air-missiles/LC
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/user/nex1/Surface-to-air-missiles/LC/build
+CMAKE_BINARY_DIR = /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/lc.dir/depend.make
@@ -72,156 +72,170 @@ include CMakeFiles/lc.dir/flags.make
 CMakeFiles/lc.dir/main.cpp.o: CMakeFiles/lc.dir/flags.make
 CMakeFiles/lc.dir/main.cpp.o: ../main.cpp
 CMakeFiles/lc.dir/main.cpp.o: CMakeFiles/lc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/nex1/Surface-to-air-missiles/LC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lc.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lc.dir/main.cpp.o -MF CMakeFiles/lc.dir/main.cpp.o.d -o CMakeFiles/lc.dir/main.cpp.o -c /home/user/nex1/Surface-to-air-missiles/LC/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nexuskang/FinalProject/Surface-to-air-missiles/LC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lc.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lc.dir/main.cpp.o -MF CMakeFiles/lc.dir/main.cpp.o.d -o CMakeFiles/lc.dir/main.cpp.o -c /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/main.cpp
 
 CMakeFiles/lc.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lc.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/nex1/Surface-to-air-missiles/LC/main.cpp > CMakeFiles/lc.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/main.cpp > CMakeFiles/lc.dir/main.cpp.i
 
 CMakeFiles/lc.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lc.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/nex1/Surface-to-air-missiles/LC/main.cpp -o CMakeFiles/lc.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/main.cpp -o CMakeFiles/lc.dir/main.cpp.s
 
 CMakeFiles/lc.dir/Config/LCConfig.cpp.o: CMakeFiles/lc.dir/flags.make
 CMakeFiles/lc.dir/Config/LCConfig.cpp.o: ../Config/LCConfig.cpp
 CMakeFiles/lc.dir/Config/LCConfig.cpp.o: CMakeFiles/lc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/nex1/Surface-to-air-missiles/LC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/lc.dir/Config/LCConfig.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lc.dir/Config/LCConfig.cpp.o -MF CMakeFiles/lc.dir/Config/LCConfig.cpp.o.d -o CMakeFiles/lc.dir/Config/LCConfig.cpp.o -c /home/user/nex1/Surface-to-air-missiles/LC/Config/LCConfig.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nexuskang/FinalProject/Surface-to-air-missiles/LC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/lc.dir/Config/LCConfig.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lc.dir/Config/LCConfig.cpp.o -MF CMakeFiles/lc.dir/Config/LCConfig.cpp.o.d -o CMakeFiles/lc.dir/Config/LCConfig.cpp.o -c /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/Config/LCConfig.cpp
 
 CMakeFiles/lc.dir/Config/LCConfig.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lc.dir/Config/LCConfig.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/nex1/Surface-to-air-missiles/LC/Config/LCConfig.cpp > CMakeFiles/lc.dir/Config/LCConfig.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/Config/LCConfig.cpp > CMakeFiles/lc.dir/Config/LCConfig.cpp.i
 
 CMakeFiles/lc.dir/Config/LCConfig.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lc.dir/Config/LCConfig.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/nex1/Surface-to-air-missiles/LC/Config/LCConfig.cpp -o CMakeFiles/lc.dir/Config/LCConfig.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/Config/LCConfig.cpp -o CMakeFiles/lc.dir/Config/LCConfig.cpp.s
 
 CMakeFiles/lc.dir/core/LCManager.cpp.o: CMakeFiles/lc.dir/flags.make
 CMakeFiles/lc.dir/core/LCManager.cpp.o: ../core/LCManager.cpp
 CMakeFiles/lc.dir/core/LCManager.cpp.o: CMakeFiles/lc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/nex1/Surface-to-air-missiles/LC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/lc.dir/core/LCManager.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lc.dir/core/LCManager.cpp.o -MF CMakeFiles/lc.dir/core/LCManager.cpp.o.d -o CMakeFiles/lc.dir/core/LCManager.cpp.o -c /home/user/nex1/Surface-to-air-missiles/LC/core/LCManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nexuskang/FinalProject/Surface-to-air-missiles/LC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/lc.dir/core/LCManager.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lc.dir/core/LCManager.cpp.o -MF CMakeFiles/lc.dir/core/LCManager.cpp.o.d -o CMakeFiles/lc.dir/core/LCManager.cpp.o -c /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/core/LCManager.cpp
 
 CMakeFiles/lc.dir/core/LCManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lc.dir/core/LCManager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/nex1/Surface-to-air-missiles/LC/core/LCManager.cpp > CMakeFiles/lc.dir/core/LCManager.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/core/LCManager.cpp > CMakeFiles/lc.dir/core/LCManager.cpp.i
 
 CMakeFiles/lc.dir/core/LCManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lc.dir/core/LCManager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/nex1/Surface-to-air-missiles/LC/core/LCManager.cpp -o CMakeFiles/lc.dir/core/LCManager.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/core/LCManager.cpp -o CMakeFiles/lc.dir/core/LCManager.cpp.s
 
 CMakeFiles/lc.dir/core/StatusLoader.cpp.o: CMakeFiles/lc.dir/flags.make
 CMakeFiles/lc.dir/core/StatusLoader.cpp.o: ../core/StatusLoader.cpp
 CMakeFiles/lc.dir/core/StatusLoader.cpp.o: CMakeFiles/lc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/nex1/Surface-to-air-missiles/LC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/lc.dir/core/StatusLoader.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lc.dir/core/StatusLoader.cpp.o -MF CMakeFiles/lc.dir/core/StatusLoader.cpp.o.d -o CMakeFiles/lc.dir/core/StatusLoader.cpp.o -c /home/user/nex1/Surface-to-air-missiles/LC/core/StatusLoader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nexuskang/FinalProject/Surface-to-air-missiles/LC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/lc.dir/core/StatusLoader.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lc.dir/core/StatusLoader.cpp.o -MF CMakeFiles/lc.dir/core/StatusLoader.cpp.o.d -o CMakeFiles/lc.dir/core/StatusLoader.cpp.o -c /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/core/StatusLoader.cpp
 
 CMakeFiles/lc.dir/core/StatusLoader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lc.dir/core/StatusLoader.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/nex1/Surface-to-air-missiles/LC/core/StatusLoader.cpp > CMakeFiles/lc.dir/core/StatusLoader.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/core/StatusLoader.cpp > CMakeFiles/lc.dir/core/StatusLoader.cpp.i
 
 CMakeFiles/lc.dir/core/StatusLoader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lc.dir/core/StatusLoader.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/nex1/Surface-to-air-missiles/LC/core/StatusLoader.cpp -o CMakeFiles/lc.dir/core/StatusLoader.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/core/StatusLoader.cpp -o CMakeFiles/lc.dir/core/StatusLoader.cpp.s
 
 CMakeFiles/lc.dir/comm/ecc/TcpECC.cpp.o: CMakeFiles/lc.dir/flags.make
 CMakeFiles/lc.dir/comm/ecc/TcpECC.cpp.o: ../comm/ecc/TcpECC.cpp
 CMakeFiles/lc.dir/comm/ecc/TcpECC.cpp.o: CMakeFiles/lc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/nex1/Surface-to-air-missiles/LC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/lc.dir/comm/ecc/TcpECC.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lc.dir/comm/ecc/TcpECC.cpp.o -MF CMakeFiles/lc.dir/comm/ecc/TcpECC.cpp.o.d -o CMakeFiles/lc.dir/comm/ecc/TcpECC.cpp.o -c /home/user/nex1/Surface-to-air-missiles/LC/comm/ecc/TcpECC.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nexuskang/FinalProject/Surface-to-air-missiles/LC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/lc.dir/comm/ecc/TcpECC.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lc.dir/comm/ecc/TcpECC.cpp.o -MF CMakeFiles/lc.dir/comm/ecc/TcpECC.cpp.o.d -o CMakeFiles/lc.dir/comm/ecc/TcpECC.cpp.o -c /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/comm/ecc/TcpECC.cpp
 
 CMakeFiles/lc.dir/comm/ecc/TcpECC.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lc.dir/comm/ecc/TcpECC.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/nex1/Surface-to-air-missiles/LC/comm/ecc/TcpECC.cpp > CMakeFiles/lc.dir/comm/ecc/TcpECC.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/comm/ecc/TcpECC.cpp > CMakeFiles/lc.dir/comm/ecc/TcpECC.cpp.i
 
 CMakeFiles/lc.dir/comm/ecc/TcpECC.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lc.dir/comm/ecc/TcpECC.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/nex1/Surface-to-air-missiles/LC/comm/ecc/TcpECC.cpp -o CMakeFiles/lc.dir/comm/ecc/TcpECC.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/comm/ecc/TcpECC.cpp -o CMakeFiles/lc.dir/comm/ecc/TcpECC.cpp.s
 
 CMakeFiles/lc.dir/comm/ls/SerialLS.cpp.o: CMakeFiles/lc.dir/flags.make
 CMakeFiles/lc.dir/comm/ls/SerialLS.cpp.o: ../comm/ls/SerialLS.cpp
 CMakeFiles/lc.dir/comm/ls/SerialLS.cpp.o: CMakeFiles/lc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/nex1/Surface-to-air-missiles/LC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/lc.dir/comm/ls/SerialLS.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lc.dir/comm/ls/SerialLS.cpp.o -MF CMakeFiles/lc.dir/comm/ls/SerialLS.cpp.o.d -o CMakeFiles/lc.dir/comm/ls/SerialLS.cpp.o -c /home/user/nex1/Surface-to-air-missiles/LC/comm/ls/SerialLS.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nexuskang/FinalProject/Surface-to-air-missiles/LC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/lc.dir/comm/ls/SerialLS.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lc.dir/comm/ls/SerialLS.cpp.o -MF CMakeFiles/lc.dir/comm/ls/SerialLS.cpp.o.d -o CMakeFiles/lc.dir/comm/ls/SerialLS.cpp.o -c /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/comm/ls/SerialLS.cpp
 
 CMakeFiles/lc.dir/comm/ls/SerialLS.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lc.dir/comm/ls/SerialLS.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/nex1/Surface-to-air-missiles/LC/comm/ls/SerialLS.cpp > CMakeFiles/lc.dir/comm/ls/SerialLS.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/comm/ls/SerialLS.cpp > CMakeFiles/lc.dir/comm/ls/SerialLS.cpp.i
 
 CMakeFiles/lc.dir/comm/ls/SerialLS.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lc.dir/comm/ls/SerialLS.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/nex1/Surface-to-air-missiles/LC/comm/ls/SerialLS.cpp -o CMakeFiles/lc.dir/comm/ls/SerialLS.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/comm/ls/SerialLS.cpp -o CMakeFiles/lc.dir/comm/ls/SerialLS.cpp.s
 
 CMakeFiles/lc.dir/comm/mfr/TcpMFR.cpp.o: CMakeFiles/lc.dir/flags.make
 CMakeFiles/lc.dir/comm/mfr/TcpMFR.cpp.o: ../comm/mfr/TcpMFR.cpp
 CMakeFiles/lc.dir/comm/mfr/TcpMFR.cpp.o: CMakeFiles/lc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/nex1/Surface-to-air-missiles/LC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/lc.dir/comm/mfr/TcpMFR.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lc.dir/comm/mfr/TcpMFR.cpp.o -MF CMakeFiles/lc.dir/comm/mfr/TcpMFR.cpp.o.d -o CMakeFiles/lc.dir/comm/mfr/TcpMFR.cpp.o -c /home/user/nex1/Surface-to-air-missiles/LC/comm/mfr/TcpMFR.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nexuskang/FinalProject/Surface-to-air-missiles/LC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/lc.dir/comm/mfr/TcpMFR.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lc.dir/comm/mfr/TcpMFR.cpp.o -MF CMakeFiles/lc.dir/comm/mfr/TcpMFR.cpp.o.d -o CMakeFiles/lc.dir/comm/mfr/TcpMFR.cpp.o -c /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/comm/mfr/TcpMFR.cpp
 
 CMakeFiles/lc.dir/comm/mfr/TcpMFR.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lc.dir/comm/mfr/TcpMFR.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/nex1/Surface-to-air-missiles/LC/comm/mfr/TcpMFR.cpp > CMakeFiles/lc.dir/comm/mfr/TcpMFR.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/comm/mfr/TcpMFR.cpp > CMakeFiles/lc.dir/comm/mfr/TcpMFR.cpp.i
 
 CMakeFiles/lc.dir/comm/mfr/TcpMFR.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lc.dir/comm/mfr/TcpMFR.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/nex1/Surface-to-air-missiles/LC/comm/mfr/TcpMFR.cpp -o CMakeFiles/lc.dir/comm/mfr/TcpMFR.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/comm/mfr/TcpMFR.cpp -o CMakeFiles/lc.dir/comm/mfr/TcpMFR.cpp.s
 
 CMakeFiles/lc.dir/core/LCCommandHandler.cpp.o: CMakeFiles/lc.dir/flags.make
 CMakeFiles/lc.dir/core/LCCommandHandler.cpp.o: ../core/LCCommandHandler.cpp
 CMakeFiles/lc.dir/core/LCCommandHandler.cpp.o: CMakeFiles/lc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/nex1/Surface-to-air-missiles/LC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/lc.dir/core/LCCommandHandler.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lc.dir/core/LCCommandHandler.cpp.o -MF CMakeFiles/lc.dir/core/LCCommandHandler.cpp.o.d -o CMakeFiles/lc.dir/core/LCCommandHandler.cpp.o -c /home/user/nex1/Surface-to-air-missiles/LC/core/LCCommandHandler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nexuskang/FinalProject/Surface-to-air-missiles/LC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/lc.dir/core/LCCommandHandler.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lc.dir/core/LCCommandHandler.cpp.o -MF CMakeFiles/lc.dir/core/LCCommandHandler.cpp.o.d -o CMakeFiles/lc.dir/core/LCCommandHandler.cpp.o -c /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/core/LCCommandHandler.cpp
 
 CMakeFiles/lc.dir/core/LCCommandHandler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lc.dir/core/LCCommandHandler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/nex1/Surface-to-air-missiles/LC/core/LCCommandHandler.cpp > CMakeFiles/lc.dir/core/LCCommandHandler.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/core/LCCommandHandler.cpp > CMakeFiles/lc.dir/core/LCCommandHandler.cpp.i
 
 CMakeFiles/lc.dir/core/LCCommandHandler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lc.dir/core/LCCommandHandler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/nex1/Surface-to-air-missiles/LC/core/LCCommandHandler.cpp -o CMakeFiles/lc.dir/core/LCCommandHandler.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/core/LCCommandHandler.cpp -o CMakeFiles/lc.dir/core/LCCommandHandler.cpp.s
 
 CMakeFiles/lc.dir/comm/common/MessageParser.cpp.o: CMakeFiles/lc.dir/flags.make
 CMakeFiles/lc.dir/comm/common/MessageParser.cpp.o: ../comm/common/MessageParser.cpp
 CMakeFiles/lc.dir/comm/common/MessageParser.cpp.o: CMakeFiles/lc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/nex1/Surface-to-air-missiles/LC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/lc.dir/comm/common/MessageParser.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lc.dir/comm/common/MessageParser.cpp.o -MF CMakeFiles/lc.dir/comm/common/MessageParser.cpp.o.d -o CMakeFiles/lc.dir/comm/common/MessageParser.cpp.o -c /home/user/nex1/Surface-to-air-missiles/LC/comm/common/MessageParser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nexuskang/FinalProject/Surface-to-air-missiles/LC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/lc.dir/comm/common/MessageParser.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lc.dir/comm/common/MessageParser.cpp.o -MF CMakeFiles/lc.dir/comm/common/MessageParser.cpp.o.d -o CMakeFiles/lc.dir/comm/common/MessageParser.cpp.o -c /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/comm/common/MessageParser.cpp
 
 CMakeFiles/lc.dir/comm/common/MessageParser.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lc.dir/comm/common/MessageParser.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/nex1/Surface-to-air-missiles/LC/comm/common/MessageParser.cpp > CMakeFiles/lc.dir/comm/common/MessageParser.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/comm/common/MessageParser.cpp > CMakeFiles/lc.dir/comm/common/MessageParser.cpp.i
 
 CMakeFiles/lc.dir/comm/common/MessageParser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lc.dir/comm/common/MessageParser.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/nex1/Surface-to-air-missiles/LC/comm/common/MessageParser.cpp -o CMakeFiles/lc.dir/comm/common/MessageParser.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/comm/common/MessageParser.cpp -o CMakeFiles/lc.dir/comm/common/MessageParser.cpp.s
 
 CMakeFiles/lc.dir/comm/common/Serializer.cpp.o: CMakeFiles/lc.dir/flags.make
 CMakeFiles/lc.dir/comm/common/Serializer.cpp.o: ../comm/common/Serializer.cpp
 CMakeFiles/lc.dir/comm/common/Serializer.cpp.o: CMakeFiles/lc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/nex1/Surface-to-air-missiles/LC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/lc.dir/comm/common/Serializer.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lc.dir/comm/common/Serializer.cpp.o -MF CMakeFiles/lc.dir/comm/common/Serializer.cpp.o.d -o CMakeFiles/lc.dir/comm/common/Serializer.cpp.o -c /home/user/nex1/Surface-to-air-missiles/LC/comm/common/Serializer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nexuskang/FinalProject/Surface-to-air-missiles/LC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/lc.dir/comm/common/Serializer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lc.dir/comm/common/Serializer.cpp.o -MF CMakeFiles/lc.dir/comm/common/Serializer.cpp.o.d -o CMakeFiles/lc.dir/comm/common/Serializer.cpp.o -c /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/comm/common/Serializer.cpp
 
 CMakeFiles/lc.dir/comm/common/Serializer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lc.dir/comm/common/Serializer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/nex1/Surface-to-air-missiles/LC/comm/common/Serializer.cpp > CMakeFiles/lc.dir/comm/common/Serializer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/comm/common/Serializer.cpp > CMakeFiles/lc.dir/comm/common/Serializer.cpp.i
 
 CMakeFiles/lc.dir/comm/common/Serializer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lc.dir/comm/common/Serializer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/nex1/Surface-to-air-missiles/LC/comm/common/Serializer.cpp -o CMakeFiles/lc.dir/comm/common/Serializer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/comm/common/Serializer.cpp -o CMakeFiles/lc.dir/comm/common/Serializer.cpp.s
+
+CMakeFiles/lc.dir/CalcAlgo/GeolocationConverter.cpp.o: CMakeFiles/lc.dir/flags.make
+CMakeFiles/lc.dir/CalcAlgo/GeolocationConverter.cpp.o: ../CalcAlgo/GeolocationConverter.cpp
+CMakeFiles/lc.dir/CalcAlgo/GeolocationConverter.cpp.o: CMakeFiles/lc.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nexuskang/FinalProject/Surface-to-air-missiles/LC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/lc.dir/CalcAlgo/GeolocationConverter.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lc.dir/CalcAlgo/GeolocationConverter.cpp.o -MF CMakeFiles/lc.dir/CalcAlgo/GeolocationConverter.cpp.o.d -o CMakeFiles/lc.dir/CalcAlgo/GeolocationConverter.cpp.o -c /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/CalcAlgo/GeolocationConverter.cpp
+
+CMakeFiles/lc.dir/CalcAlgo/GeolocationConverter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lc.dir/CalcAlgo/GeolocationConverter.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/CalcAlgo/GeolocationConverter.cpp > CMakeFiles/lc.dir/CalcAlgo/GeolocationConverter.cpp.i
+
+CMakeFiles/lc.dir/CalcAlgo/GeolocationConverter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lc.dir/CalcAlgo/GeolocationConverter.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/CalcAlgo/GeolocationConverter.cpp -o CMakeFiles/lc.dir/CalcAlgo/GeolocationConverter.cpp.s
 
 CMakeFiles/lc.dir/inih/ini.c.o: CMakeFiles/lc.dir/flags.make
 CMakeFiles/lc.dir/inih/ini.c.o: ../inih/ini.c
 CMakeFiles/lc.dir/inih/ini.c.o: CMakeFiles/lc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/nex1/Surface-to-air-missiles/LC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/lc.dir/inih/ini.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/lc.dir/inih/ini.c.o -MF CMakeFiles/lc.dir/inih/ini.c.o.d -o CMakeFiles/lc.dir/inih/ini.c.o -c /home/user/nex1/Surface-to-air-missiles/LC/inih/ini.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nexuskang/FinalProject/Surface-to-air-missiles/LC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/lc.dir/inih/ini.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/lc.dir/inih/ini.c.o -MF CMakeFiles/lc.dir/inih/ini.c.o.d -o CMakeFiles/lc.dir/inih/ini.c.o -c /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/inih/ini.c
 
 CMakeFiles/lc.dir/inih/ini.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lc.dir/inih/ini.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/user/nex1/Surface-to-air-missiles/LC/inih/ini.c > CMakeFiles/lc.dir/inih/ini.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/inih/ini.c > CMakeFiles/lc.dir/inih/ini.c.i
 
 CMakeFiles/lc.dir/inih/ini.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lc.dir/inih/ini.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/user/nex1/Surface-to-air-missiles/LC/inih/ini.c -o CMakeFiles/lc.dir/inih/ini.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/inih/ini.c -o CMakeFiles/lc.dir/inih/ini.c.s
 
 # Object files for target lc
 lc_OBJECTS = \
@@ -235,6 +249,7 @@ lc_OBJECTS = \
 "CMakeFiles/lc.dir/core/LCCommandHandler.cpp.o" \
 "CMakeFiles/lc.dir/comm/common/MessageParser.cpp.o" \
 "CMakeFiles/lc.dir/comm/common/Serializer.cpp.o" \
+"CMakeFiles/lc.dir/CalcAlgo/GeolocationConverter.cpp.o" \
 "CMakeFiles/lc.dir/inih/ini.c.o"
 
 # External object files for target lc
@@ -250,10 +265,11 @@ lc_EXTERNAL_OBJECTS =
 ../bin/lc: CMakeFiles/lc.dir/core/LCCommandHandler.cpp.o
 ../bin/lc: CMakeFiles/lc.dir/comm/common/MessageParser.cpp.o
 ../bin/lc: CMakeFiles/lc.dir/comm/common/Serializer.cpp.o
+../bin/lc: CMakeFiles/lc.dir/CalcAlgo/GeolocationConverter.cpp.o
 ../bin/lc: CMakeFiles/lc.dir/inih/ini.c.o
 ../bin/lc: CMakeFiles/lc.dir/build.make
 ../bin/lc: CMakeFiles/lc.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/user/nex1/Surface-to-air-missiles/LC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable ../bin/lc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nexuskang/FinalProject/Surface-to-air-missiles/LC/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable ../bin/lc"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lc.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -265,6 +281,6 @@ CMakeFiles/lc.dir/clean:
 .PHONY : CMakeFiles/lc.dir/clean
 
 CMakeFiles/lc.dir/depend:
-	cd /home/user/nex1/Surface-to-air-missiles/LC/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/user/nex1/Surface-to-air-missiles/LC /home/user/nex1/Surface-to-air-missiles/LC /home/user/nex1/Surface-to-air-missiles/LC/build /home/user/nex1/Surface-to-air-missiles/LC/build /home/user/nex1/Surface-to-air-missiles/LC/build/CMakeFiles/lc.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nexuskang/FinalProject/Surface-to-air-missiles/LC /home/nexuskang/FinalProject/Surface-to-air-missiles/LC /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/build /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/build /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/build/CMakeFiles/lc.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/lc.dir/depend
 

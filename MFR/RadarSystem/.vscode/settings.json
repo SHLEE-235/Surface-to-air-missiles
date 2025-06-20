@@ -56,6 +56,10 @@
         "iomanip": "cpp",
         "sstream": "cpp",
         "variant": "cpp",
-        "fstream": "cpp"
+        "fstream": "cpp",
+        "climits": "cpp",
+        "complex": "cpp",
+        "map": "cpp",
+        "set": "cpp"
     }
 }

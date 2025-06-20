@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "../bin/lc"
   "../bin/lc.pdb"
+  "CMakeFiles/lc.dir/CalcAlgo/GeolocationConverter.cpp.o"
+  "CMakeFiles/lc.dir/CalcAlgo/GeolocationConverter.cpp.o.d"
   "CMakeFiles/lc.dir/Config/LCConfig.cpp.o"
   "CMakeFiles/lc.dir/Config/LCConfig.cpp.o.d"
   "CMakeFiles/lc.dir/comm/common/MessageParser.cpp.o"

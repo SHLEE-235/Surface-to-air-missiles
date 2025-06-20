@@ -7,23 +7,23 @@
 
 StepMotorController::StepMotorController()
 {
-    if (loadMfrConfig("../config/MFR.ini", mfrConfig)) 
-    {
-        std::cout << "Device: " << mfrConfig.device << ", BaudRate: " << mfrConfig.uartBaudRate << std::endl;
+    // if (loadMfrConfig("../config/MFR.ini", mfrConfig)) 
+    // {
+    //     std::cout << "Device: " << mfrConfig.device << ", BaudRate: " << mfrConfig.uartBaudRate << std::endl;
 
-        device = mfrConfig.device;
-        uartBaudRate = mfrConfig.uartBaudRate;
+    //     device = mfrConfig.device;
+    //     uartBaudRate = mfrConfig.uartBaudRate;
 
-        if(!initUart())
-        {
-            std::cerr << "[StepMotorController::initUart] Uart Init Failed" << std::endl;
-        }
-    }
+    //     if(!initUart())
+    //     {
+    //         std::cerr << "[StepMotorController::initUart] Uart Init Failed" << std::endl;
+    //     }
+    // }
 
-    else
-    {
-        std::cerr << "[StepMotorController::StepMotorController] ini Read Failed" << std::endl;
-    }
+    // else
+    // {
+    //     std::cerr << "[StepMotorController::StepMotorController] ini Read Failed" << std::endl;
+    // }
 }
 
 StepMotorController::~StepMotorController()

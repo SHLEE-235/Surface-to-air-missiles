@@ -1,7 +1,7 @@
 CMakeFiles/lc.dir/Config/LCConfig.cpp.o: \
- /home/user/nex1/Surface-to-air-missiles/LC/Config/LCConfig.cpp \
+ /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/Config/LCConfig.cpp \
  /usr/include/stdc-predef.h \
- /home/user/nex1/Surface-to-air-missiles/LC/Config/LCConfig.h \
+ /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/Config/LCConfig.h \
  /usr/include/c++/11/string \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

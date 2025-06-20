@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/user/nex1/Surface-to-air-missiles/Simulator
+CMAKE_SOURCE_DIR = /home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/user/nex1/Surface-to-air-missiles/Simulator/build
+CMAKE_BINARY_DIR = /home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/SurfaceToAirWeaponSystem.dir/depend.make
@@ -72,128 +72,128 @@ include CMakeFiles/SurfaceToAirWeaponSystem.dir/flags.make
 CMakeFiles/SurfaceToAirWeaponSystem.dir/main.cpp.o: CMakeFiles/SurfaceToAirWeaponSystem.dir/flags.make
 CMakeFiles/SurfaceToAirWeaponSystem.dir/main.cpp.o: ../main.cpp
 CMakeFiles/SurfaceToAirWeaponSystem.dir/main.cpp.o: CMakeFiles/SurfaceToAirWeaponSystem.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/nex1/Surface-to-air-missiles/Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SurfaceToAirWeaponSystem.dir/main.cpp.o"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SurfaceToAirWeaponSystem.dir/main.cpp.o -MF CMakeFiles/SurfaceToAirWeaponSystem.dir/main.cpp.o.d -o CMakeFiles/SurfaceToAirWeaponSystem.dir/main.cpp.o -c /home/user/nex1/Surface-to-air-missiles/Simulator/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SurfaceToAirWeaponSystem.dir/main.cpp.o"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SurfaceToAirWeaponSystem.dir/main.cpp.o -MF CMakeFiles/SurfaceToAirWeaponSystem.dir/main.cpp.o.d -o CMakeFiles/SurfaceToAirWeaponSystem.dir/main.cpp.o -c /home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/main.cpp
 
 CMakeFiles/SurfaceToAirWeaponSystem.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SurfaceToAirWeaponSystem.dir/main.cpp.i"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/nex1/Surface-to-air-missiles/Simulator/main.cpp > CMakeFiles/SurfaceToAirWeaponSystem.dir/main.cpp.i
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/main.cpp > CMakeFiles/SurfaceToAirWeaponSystem.dir/main.cpp.i
 
 CMakeFiles/SurfaceToAirWeaponSystem.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SurfaceToAirWeaponSystem.dir/main.cpp.s"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/nex1/Surface-to-air-missiles/Simulator/main.cpp -o CMakeFiles/SurfaceToAirWeaponSystem.dir/main.cpp.s
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/main.cpp -o CMakeFiles/SurfaceToAirWeaponSystem.dir/main.cpp.s
 
 CMakeFiles/SurfaceToAirWeaponSystem.dir/Simulator/Simulator.cpp.o: CMakeFiles/SurfaceToAirWeaponSystem.dir/flags.make
 CMakeFiles/SurfaceToAirWeaponSystem.dir/Simulator/Simulator.cpp.o: ../Simulator/Simulator.cpp
 CMakeFiles/SurfaceToAirWeaponSystem.dir/Simulator/Simulator.cpp.o: CMakeFiles/SurfaceToAirWeaponSystem.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/nex1/Surface-to-air-missiles/Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/SurfaceToAirWeaponSystem.dir/Simulator/Simulator.cpp.o"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SurfaceToAirWeaponSystem.dir/Simulator/Simulator.cpp.o -MF CMakeFiles/SurfaceToAirWeaponSystem.dir/Simulator/Simulator.cpp.o.d -o CMakeFiles/SurfaceToAirWeaponSystem.dir/Simulator/Simulator.cpp.o -c /home/user/nex1/Surface-to-air-missiles/Simulator/Simulator/Simulator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/SurfaceToAirWeaponSystem.dir/Simulator/Simulator.cpp.o"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SurfaceToAirWeaponSystem.dir/Simulator/Simulator.cpp.o -MF CMakeFiles/SurfaceToAirWeaponSystem.dir/Simulator/Simulator.cpp.o.d -o CMakeFiles/SurfaceToAirWeaponSystem.dir/Simulator/Simulator.cpp.o -c /home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/Simulator/Simulator.cpp
 
 CMakeFiles/SurfaceToAirWeaponSystem.dir/Simulator/Simulator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SurfaceToAirWeaponSystem.dir/Simulator/Simulator.cpp.i"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/nex1/Surface-to-air-missiles/Simulator/Simulator/Simulator.cpp > CMakeFiles/SurfaceToAirWeaponSystem.dir/Simulator/Simulator.cpp.i
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/Simulator/Simulator.cpp > CMakeFiles/SurfaceToAirWeaponSystem.dir/Simulator/Simulator.cpp.i
 
 CMakeFiles/SurfaceToAirWeaponSystem.dir/Simulator/Simulator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SurfaceToAirWeaponSystem.dir/Simulator/Simulator.cpp.s"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/nex1/Surface-to-air-missiles/Simulator/Simulator/Simulator.cpp -o CMakeFiles/SurfaceToAirWeaponSystem.dir/Simulator/Simulator.cpp.s
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/Simulator/Simulator.cpp -o CMakeFiles/SurfaceToAirWeaponSystem.dir/Simulator/Simulator.cpp.s
 
 CMakeFiles/SurfaceToAirWeaponSystem.dir/UDPCommunicate/LSRecvUDPManager.cpp.o: CMakeFiles/SurfaceToAirWeaponSystem.dir/flags.make
 CMakeFiles/SurfaceToAirWeaponSystem.dir/UDPCommunicate/LSRecvUDPManager.cpp.o: ../UDPCommunicate/LSRecvUDPManager.cpp
 CMakeFiles/SurfaceToAirWeaponSystem.dir/UDPCommunicate/LSRecvUDPManager.cpp.o: CMakeFiles/SurfaceToAirWeaponSystem.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/nex1/Surface-to-air-missiles/Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SurfaceToAirWeaponSystem.dir/UDPCommunicate/LSRecvUDPManager.cpp.o"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SurfaceToAirWeaponSystem.dir/UDPCommunicate/LSRecvUDPManager.cpp.o -MF CMakeFiles/SurfaceToAirWeaponSystem.dir/UDPCommunicate/LSRecvUDPManager.cpp.o.d -o CMakeFiles/SurfaceToAirWeaponSystem.dir/UDPCommunicate/LSRecvUDPManager.cpp.o -c /home/user/nex1/Surface-to-air-missiles/Simulator/UDPCommunicate/LSRecvUDPManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SurfaceToAirWeaponSystem.dir/UDPCommunicate/LSRecvUDPManager.cpp.o"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SurfaceToAirWeaponSystem.dir/UDPCommunicate/LSRecvUDPManager.cpp.o -MF CMakeFiles/SurfaceToAirWeaponSystem.dir/UDPCommunicate/LSRecvUDPManager.cpp.o.d -o CMakeFiles/SurfaceToAirWeaponSystem.dir/UDPCommunicate/LSRecvUDPManager.cpp.o -c /home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/UDPCommunicate/LSRecvUDPManager.cpp
 
 CMakeFiles/SurfaceToAirWeaponSystem.dir/UDPCommunicate/LSRecvUDPManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SurfaceToAirWeaponSystem.dir/UDPCommunicate/LSRecvUDPManager.cpp.i"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/nex1/Surface-to-air-missiles/Simulator/UDPCommunicate/LSRecvUDPManager.cpp > CMakeFiles/SurfaceToAirWeaponSystem.dir/UDPCommunicate/LSRecvUDPManager.cpp.i
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/UDPCommunicate/LSRecvUDPManager.cpp > CMakeFiles/SurfaceToAirWeaponSystem.dir/UDPCommunicate/LSRecvUDPManager.cpp.i
 
 CMakeFiles/SurfaceToAirWeaponSystem.dir/UDPCommunicate/LSRecvUDPManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SurfaceToAirWeaponSystem.dir/UDPCommunicate/LSRecvUDPManager.cpp.s"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/nex1/Surface-to-air-missiles/Simulator/UDPCommunicate/LSRecvUDPManager.cpp -o CMakeFiles/SurfaceToAirWeaponSystem.dir/UDPCommunicate/LSRecvUDPManager.cpp.s
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/UDPCommunicate/LSRecvUDPManager.cpp -o CMakeFiles/SurfaceToAirWeaponSystem.dir/UDPCommunicate/LSRecvUDPManager.cpp.s
 
 CMakeFiles/SurfaceToAirWeaponSystem.dir/UDPCommunicate/MFRSendUDPManager.cpp.o: CMakeFiles/SurfaceToAirWeaponSystem.dir/flags.make
 CMakeFiles/SurfaceToAirWeaponSystem.dir/UDPCommunicate/MFRSendUDPManager.cpp.o: ../UDPCommunicate/MFRSendUDPManager.cpp
 CMakeFiles/SurfaceToAirWeaponSystem.dir/UDPCommunicate/MFRSendUDPManager.cpp.o: CMakeFiles/SurfaceToAirWeaponSystem.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/nex1/Surface-to-air-missiles/Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/SurfaceToAirWeaponSystem.dir/UDPCommunicate/MFRSendUDPManager.cpp.o"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SurfaceToAirWeaponSystem.dir/UDPCommunicate/MFRSendUDPManager.cpp.o -MF CMakeFiles/SurfaceToAirWeaponSystem.dir/UDPCommunicate/MFRSendUDPManager.cpp.o.d -o CMakeFiles/SurfaceToAirWeaponSystem.dir/UDPCommunicate/MFRSendUDPManager.cpp.o -c /home/user/nex1/Surface-to-air-missiles/Simulator/UDPCommunicate/MFRSendUDPManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/SurfaceToAirWeaponSystem.dir/UDPCommunicate/MFRSendUDPManager.cpp.o"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SurfaceToAirWeaponSystem.dir/UDPCommunicate/MFRSendUDPManager.cpp.o -MF CMakeFiles/SurfaceToAirWeaponSystem.dir/UDPCommunicate/MFRSendUDPManager.cpp.o.d -o CMakeFiles/SurfaceToAirWeaponSystem.dir/UDPCommunicate/MFRSendUDPManager.cpp.o -c /home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/UDPCommunicate/MFRSendUDPManager.cpp
 
 CMakeFiles/SurfaceToAirWeaponSystem.dir/UDPCommunicate/MFRSendUDPManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SurfaceToAirWeaponSystem.dir/UDPCommunicate/MFRSendUDPManager.cpp.i"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/nex1/Surface-to-air-missiles/Simulator/UDPCommunicate/MFRSendUDPManager.cpp > CMakeFiles/SurfaceToAirWeaponSystem.dir/UDPCommunicate/MFRSendUDPManager.cpp.i
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/UDPCommunicate/MFRSendUDPManager.cpp > CMakeFiles/SurfaceToAirWeaponSystem.dir/UDPCommunicate/MFRSendUDPManager.cpp.i
 
 CMakeFiles/SurfaceToAirWeaponSystem.dir/UDPCommunicate/MFRSendUDPManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SurfaceToAirWeaponSystem.dir/UDPCommunicate/MFRSendUDPManager.cpp.s"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/nex1/Surface-to-air-missiles/Simulator/UDPCommunicate/MFRSendUDPManager.cpp -o CMakeFiles/SurfaceToAirWeaponSystem.dir/UDPCommunicate/MFRSendUDPManager.cpp.s
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/UDPCommunicate/MFRSendUDPManager.cpp -o CMakeFiles/SurfaceToAirWeaponSystem.dir/UDPCommunicate/MFRSendUDPManager.cpp.s
 
 CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockTarget.cpp.o: CMakeFiles/SurfaceToAirWeaponSystem.dir/flags.make
 CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockTarget.cpp.o: ../Mock/MockTarget.cpp
 CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockTarget.cpp.o: CMakeFiles/SurfaceToAirWeaponSystem.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/nex1/Surface-to-air-missiles/Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockTarget.cpp.o"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockTarget.cpp.o -MF CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockTarget.cpp.o.d -o CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockTarget.cpp.o -c /home/user/nex1/Surface-to-air-missiles/Simulator/Mock/MockTarget.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockTarget.cpp.o"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockTarget.cpp.o -MF CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockTarget.cpp.o.d -o CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockTarget.cpp.o -c /home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/Mock/MockTarget.cpp
 
 CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockTarget.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockTarget.cpp.i"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/nex1/Surface-to-air-missiles/Simulator/Mock/MockTarget.cpp > CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockTarget.cpp.i
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/Mock/MockTarget.cpp > CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockTarget.cpp.i
 
 CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockTarget.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockTarget.cpp.s"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/nex1/Surface-to-air-missiles/Simulator/Mock/MockTarget.cpp -o CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockTarget.cpp.s
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/Mock/MockTarget.cpp -o CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockTarget.cpp.s
 
 CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockTargetManager.cpp.o: CMakeFiles/SurfaceToAirWeaponSystem.dir/flags.make
 CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockTargetManager.cpp.o: ../Mock/MockTargetManager.cpp
 CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockTargetManager.cpp.o: CMakeFiles/SurfaceToAirWeaponSystem.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/nex1/Surface-to-air-missiles/Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockTargetManager.cpp.o"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockTargetManager.cpp.o -MF CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockTargetManager.cpp.o.d -o CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockTargetManager.cpp.o -c /home/user/nex1/Surface-to-air-missiles/Simulator/Mock/MockTargetManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockTargetManager.cpp.o"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockTargetManager.cpp.o -MF CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockTargetManager.cpp.o.d -o CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockTargetManager.cpp.o -c /home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/Mock/MockTargetManager.cpp
 
 CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockTargetManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockTargetManager.cpp.i"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/nex1/Surface-to-air-missiles/Simulator/Mock/MockTargetManager.cpp > CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockTargetManager.cpp.i
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/Mock/MockTargetManager.cpp > CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockTargetManager.cpp.i
 
 CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockTargetManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockTargetManager.cpp.s"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/nex1/Surface-to-air-missiles/Simulator/Mock/MockTargetManager.cpp -o CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockTargetManager.cpp.s
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/Mock/MockTargetManager.cpp -o CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockTargetManager.cpp.s
 
 CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockMissileManager.cpp.o: CMakeFiles/SurfaceToAirWeaponSystem.dir/flags.make
 CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockMissileManager.cpp.o: ../Mock/MockMissileManager.cpp
 CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockMissileManager.cpp.o: CMakeFiles/SurfaceToAirWeaponSystem.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/nex1/Surface-to-air-missiles/Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockMissileManager.cpp.o"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockMissileManager.cpp.o -MF CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockMissileManager.cpp.o.d -o CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockMissileManager.cpp.o -c /home/user/nex1/Surface-to-air-missiles/Simulator/Mock/MockMissileManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockMissileManager.cpp.o"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockMissileManager.cpp.o -MF CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockMissileManager.cpp.o.d -o CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockMissileManager.cpp.o -c /home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/Mock/MockMissileManager.cpp
 
 CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockMissileManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockMissileManager.cpp.i"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/nex1/Surface-to-air-missiles/Simulator/Mock/MockMissileManager.cpp > CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockMissileManager.cpp.i
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/Mock/MockMissileManager.cpp > CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockMissileManager.cpp.i
 
 CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockMissileManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockMissileManager.cpp.s"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/nex1/Surface-to-air-missiles/Simulator/Mock/MockMissileManager.cpp -o CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockMissileManager.cpp.s
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/Mock/MockMissileManager.cpp -o CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockMissileManager.cpp.s
 
 CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockMissile.cpp.o: CMakeFiles/SurfaceToAirWeaponSystem.dir/flags.make
 CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockMissile.cpp.o: ../Mock/MockMissile.cpp
 CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockMissile.cpp.o: CMakeFiles/SurfaceToAirWeaponSystem.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/nex1/Surface-to-air-missiles/Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockMissile.cpp.o"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockMissile.cpp.o -MF CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockMissile.cpp.o.d -o CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockMissile.cpp.o -c /home/user/nex1/Surface-to-air-missiles/Simulator/Mock/MockMissile.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockMissile.cpp.o"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockMissile.cpp.o -MF CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockMissile.cpp.o.d -o CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockMissile.cpp.o -c /home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/Mock/MockMissile.cpp
 
 CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockMissile.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockMissile.cpp.i"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/nex1/Surface-to-air-missiles/Simulator/Mock/MockMissile.cpp > CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockMissile.cpp.i
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/Mock/MockMissile.cpp > CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockMissile.cpp.i
 
 CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockMissile.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockMissile.cpp.s"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/nex1/Surface-to-air-missiles/Simulator/Mock/MockMissile.cpp -o CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockMissile.cpp.s
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/Mock/MockMissile.cpp -o CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockMissile.cpp.s
 
 CMakeFiles/SurfaceToAirWeaponSystem.dir/Config/Config.cpp.o: CMakeFiles/SurfaceToAirWeaponSystem.dir/flags.make
 CMakeFiles/SurfaceToAirWeaponSystem.dir/Config/Config.cpp.o: ../Config/Config.cpp
 CMakeFiles/SurfaceToAirWeaponSystem.dir/Config/Config.cpp.o: CMakeFiles/SurfaceToAirWeaponSystem.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/user/nex1/Surface-to-air-missiles/Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/SurfaceToAirWeaponSystem.dir/Config/Config.cpp.o"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SurfaceToAirWeaponSystem.dir/Config/Config.cpp.o -MF CMakeFiles/SurfaceToAirWeaponSystem.dir/Config/Config.cpp.o.d -o CMakeFiles/SurfaceToAirWeaponSystem.dir/Config/Config.cpp.o -c /home/user/nex1/Surface-to-air-missiles/Simulator/Config/Config.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/SurfaceToAirWeaponSystem.dir/Config/Config.cpp.o"
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SurfaceToAirWeaponSystem.dir/Config/Config.cpp.o -MF CMakeFiles/SurfaceToAirWeaponSystem.dir/Config/Config.cpp.o.d -o CMakeFiles/SurfaceToAirWeaponSystem.dir/Config/Config.cpp.o -c /home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/Config/Config.cpp
 
 CMakeFiles/SurfaceToAirWeaponSystem.dir/Config/Config.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SurfaceToAirWeaponSystem.dir/Config/Config.cpp.i"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/user/nex1/Surface-to-air-missiles/Simulator/Config/Config.cpp > CMakeFiles/SurfaceToAirWeaponSystem.dir/Config/Config.cpp.i
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/Config/Config.cpp > CMakeFiles/SurfaceToAirWeaponSystem.dir/Config/Config.cpp.i
 
 CMakeFiles/SurfaceToAirWeaponSystem.dir/Config/Config.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SurfaceToAirWeaponSystem.dir/Config/Config.cpp.s"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/user/nex1/Surface-to-air-missiles/Simulator/Config/Config.cpp -o CMakeFiles/SurfaceToAirWeaponSystem.dir/Config/Config.cpp.s
+	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/Config/Config.cpp -o CMakeFiles/SurfaceToAirWeaponSystem.dir/Config/Config.cpp.s
 
 # Object files for target SurfaceToAirWeaponSystem
 SurfaceToAirWeaponSystem_OBJECTS = \
@@ -221,7 +221,7 @@ SurfaceToAirWeaponSystem: CMakeFiles/SurfaceToAirWeaponSystem.dir/Mock/MockMissi
 SurfaceToAirWeaponSystem: CMakeFiles/SurfaceToAirWeaponSystem.dir/Config/Config.cpp.o
 SurfaceToAirWeaponSystem: CMakeFiles/SurfaceToAirWeaponSystem.dir/build.make
 SurfaceToAirWeaponSystem: CMakeFiles/SurfaceToAirWeaponSystem.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/user/nex1/Surface-to-air-missiles/Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable SurfaceToAirWeaponSystem"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable SurfaceToAirWeaponSystem"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SurfaceToAirWeaponSystem.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -233,6 +233,6 @@ CMakeFiles/SurfaceToAirWeaponSystem.dir/clean:
 .PHONY : CMakeFiles/SurfaceToAirWeaponSystem.dir/clean
 
 CMakeFiles/SurfaceToAirWeaponSystem.dir/depend:
-	cd /home/user/nex1/Surface-to-air-missiles/Simulator/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/user/nex1/Surface-to-air-missiles/Simulator /home/user/nex1/Surface-to-air-missiles/Simulator /home/user/nex1/Surface-to-air-missiles/Simulator/build /home/user/nex1/Surface-to-air-missiles/Simulator/build /home/user/nex1/Surface-to-air-missiles/Simulator/build/CMakeFiles/SurfaceToAirWeaponSystem.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator /home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator /home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/build /home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/build /home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/build/CMakeFiles/SurfaceToAirWeaponSystem.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/SurfaceToAirWeaponSystem.dir/depend
 

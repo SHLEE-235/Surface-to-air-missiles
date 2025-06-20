@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/user/nex1/Surface-to-air-missiles/LC
+CMAKE_SOURCE_DIR = /home/nexuskang/FinalProject/Surface-to-air-missiles/LC
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/user/nex1/Surface-to-air-missiles/LC/build
+CMAKE_BINARY_DIR = /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/nex1/Surface-to-air-missiles/LC/build/CMakeFiles /home/user/nex1/Surface-to-air-missiles/LC/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/build/CMakeFiles /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/user/nex1/Surface-to-air-missiles/LC/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -128,6 +128,30 @@ lc: cmake_check_build_system
 lc/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lc.dir/build.make CMakeFiles/lc.dir/build
 .PHONY : lc/fast
+
+CalcAlgo/GeolocationConverter.o: CalcAlgo/GeolocationConverter.cpp.o
+.PHONY : CalcAlgo/GeolocationConverter.o
+
+# target to build an object file
+CalcAlgo/GeolocationConverter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lc.dir/build.make CMakeFiles/lc.dir/CalcAlgo/GeolocationConverter.cpp.o
+.PHONY : CalcAlgo/GeolocationConverter.cpp.o
+
+CalcAlgo/GeolocationConverter.i: CalcAlgo/GeolocationConverter.cpp.i
+.PHONY : CalcAlgo/GeolocationConverter.i
+
+# target to preprocess a source file
+CalcAlgo/GeolocationConverter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lc.dir/build.make CMakeFiles/lc.dir/CalcAlgo/GeolocationConverter.cpp.i
+.PHONY : CalcAlgo/GeolocationConverter.cpp.i
+
+CalcAlgo/GeolocationConverter.s: CalcAlgo/GeolocationConverter.cpp.s
+.PHONY : CalcAlgo/GeolocationConverter.s
+
+# target to generate assembly for a file
+CalcAlgo/GeolocationConverter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lc.dir/build.make CMakeFiles/lc.dir/CalcAlgo/GeolocationConverter.cpp.s
+.PHONY : CalcAlgo/GeolocationConverter.cpp.s
 
 Config/LCConfig.o: Config/LCConfig.cpp.o
 .PHONY : Config/LCConfig.o
@@ -402,6 +426,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... lc"
+	@echo "... CalcAlgo/GeolocationConverter.o"
+	@echo "... CalcAlgo/GeolocationConverter.i"
+	@echo "... CalcAlgo/GeolocationConverter.s"
 	@echo "... Config/LCConfig.o"
 	@echo "... Config/LCConfig.i"
 	@echo "... Config/LCConfig.s"

@@ -5,13 +5,13 @@
 # compile CXX with /usr/bin/c++
 C_DEFINES = 
 
-C_INCLUDES = -I/home/user/nex1/Surface-to-air-missiles/LC/core -I/home/user/nex1/Surface-to-air-missiles/LC/comm/common -I/home/user/nex1/Surface-to-air-missiles/LC/comm/ecc -I/home/user/nex1/Surface-to-air-missiles/LC/comm/ls -I/home/user/nex1/Surface-to-air-missiles/LC/comm/mfr -I/home/user/nex1/Surface-to-air-missiles/LC/status -I/home/user/nex1/Surface-to-air-missiles/LC/inih -I/home/user/nex1/Surface-to-air-missiles/LC/Config
+C_INCLUDES = -I/home/nexuskang/FinalProject/Surface-to-air-missiles/LC/core -I/home/nexuskang/FinalProject/Surface-to-air-missiles/LC/comm/common -I/home/nexuskang/FinalProject/Surface-to-air-missiles/LC/comm/ecc -I/home/nexuskang/FinalProject/Surface-to-air-missiles/LC/comm/ls -I/home/nexuskang/FinalProject/Surface-to-air-missiles/LC/comm/mfr -I/home/nexuskang/FinalProject/Surface-to-air-missiles/LC/status -I/home/nexuskang/FinalProject/Surface-to-air-missiles/LC/inih -I/home/nexuskang/FinalProject/Surface-to-air-missiles/LC/Config -I/home/nexuskang/FinalProject/Surface-to-air-missiles/LC/CalcAlgo -isystem /usr/include/eigen3
 
 C_FLAGS = -g
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/user/nex1/Surface-to-air-missiles/LC/core -I/home/user/nex1/Surface-to-air-missiles/LC/comm/common -I/home/user/nex1/Surface-to-air-missiles/LC/comm/ecc -I/home/user/nex1/Surface-to-air-missiles/LC/comm/ls -I/home/user/nex1/Surface-to-air-missiles/LC/comm/mfr -I/home/user/nex1/Surface-to-air-missiles/LC/status -I/home/user/nex1/Surface-to-air-missiles/LC/inih -I/home/user/nex1/Surface-to-air-missiles/LC/Config
+CXX_INCLUDES = -I/home/nexuskang/FinalProject/Surface-to-air-missiles/LC/core -I/home/nexuskang/FinalProject/Surface-to-air-missiles/LC/comm/common -I/home/nexuskang/FinalProject/Surface-to-air-missiles/LC/comm/ecc -I/home/nexuskang/FinalProject/Surface-to-air-missiles/LC/comm/ls -I/home/nexuskang/FinalProject/Surface-to-air-missiles/LC/comm/mfr -I/home/nexuskang/FinalProject/Surface-to-air-missiles/LC/status -I/home/nexuskang/FinalProject/Surface-to-air-missiles/LC/inih -I/home/nexuskang/FinalProject/Surface-to-air-missiles/LC/Config -I/home/nexuskang/FinalProject/Surface-to-air-missiles/LC/CalcAlgo -isystem /usr/include/eigen3
 
 CXX_FLAGS = -g
 

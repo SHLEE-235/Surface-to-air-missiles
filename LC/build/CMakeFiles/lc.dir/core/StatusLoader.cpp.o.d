@@ -1,8 +1,8 @@
 CMakeFiles/lc.dir/core/StatusLoader.cpp.o: \
- /home/user/nex1/Surface-to-air-missiles/LC/core/StatusLoader.cpp \
+ /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/core/StatusLoader.cpp \
  /usr/include/stdc-predef.h \
- /home/user/nex1/Surface-to-air-missiles/LC/core/StatusLoader.h \
- /home/user/nex1/Surface-to-air-missiles/LC/comm/common/SystemStatus.h \
+ /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/core/StatusLoader.h \
+ /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/comm/common/SystemStatus.h \
  /usr/include/c++/11/string \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -135,7 +135,7 @@ CMakeFiles/lc.dir/core/StatusLoader.cpp.o: \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /home/user/nex1/Surface-to-air-missiles/LC/inih/INIReader.h \
+ /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/inih/INIReader.h \
  /usr/include/c++/11/map /usr/include/c++/11/bits/stl_tree.h \
  /usr/include/c++/11/ext/aligned_buffer.h \
  /usr/include/c++/11/bits/node_handle.h \
@@ -167,5 +167,5 @@ CMakeFiles/lc.dir/core/StatusLoader.cpp.o: \
  /usr/include/c++/11/bits/ostream.tcc \
  /usr/include/c++/11/bits/istream.tcc \
  /usr/include/c++/11/bits/sstream.tcc \
- /home/user/nex1/Surface-to-air-missiles/LC/inih/ini.h \
+ /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/inih/ini.h \
  /usr/include/c++/11/iostream

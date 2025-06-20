@@ -1,7 +1,7 @@
 CMakeFiles/lc.dir/inih/ini.c.o: \
- /home/user/nex1/Surface-to-air-missiles/LC/inih/ini.c \
+ /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/inih/ini.c \
  /usr/include/stdc-predef.h \
- /home/user/nex1/Surface-to-air-missiles/LC/inih/ini.h \
+ /home/nexuskang/FinalProject/Surface-to-air-missiles/LC/inih/ini.h \
  /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \

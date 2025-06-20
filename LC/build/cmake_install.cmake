@@ -1,4 +1,4 @@
-# Install script for directory: /home/user/nex1/Surface-to-air-missiles/LC
+# Install script for directory: /home/nexuskang/FinalProject/Surface-to-air-missiles/LC
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/user/nex1/Surface-to-air-missiles/LC/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/nexuskang/FinalProject/Surface-to-air-missiles/LC/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

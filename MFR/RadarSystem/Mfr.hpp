@@ -60,18 +60,6 @@ private:
     
     /// @brief Simulator 통신 매니저 - UDP/IP
     MfrSimCommManager* simCommManager;
-    
-    /// @brief 모의 타겟 공유 자원 관리
-    std::shared_mutex mockTargetMutex;
-    
-    /// @brief 모의 미사일 공유 자원 관리
-    std::shared_mutex mockMissileMutex;
-
-    /// @brief 탐지된 모의 타겟 공유 자원 관리
-    std::shared_mutex detectedTargetMutex;
-    
-    /// @brief 탐지된 모의 미사일 공유 자원 관리
-    std::shared_mutex detectedMissileMutex;
 
     /// @brief 모의 표적 관리 자료구조
     std::unordered_map<unsigned int, localMockSimData> mockTargets;

@@ -1,7 +1,7 @@
 CMakeFiles/SurfaceToAirWeaponSystem.dir/Config/Config.cpp.o: \
- /home/user/nex1/Surface-to-air-missiles/Simulator/Config/Config.cpp \
+ /home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/Config/Config.cpp \
  /usr/include/stdc-predef.h \
- /home/user/nex1/Surface-to-air-missiles/Simulator/Config/Config.h \
+ /home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/Config/Config.h \
  /usr/include/c++/11/string \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

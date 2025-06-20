@@ -1,7 +1,7 @@
 CMakeFiles/SurfaceToAirWeaponSystem.dir/UDPCommunicate/MFRSendUDPManager.cpp.o: \
- /home/user/nex1/Surface-to-air-missiles/Simulator/UDPCommunicate/MFRSendUDPManager.cpp \
+ /home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/UDPCommunicate/MFRSendUDPManager.cpp \
  /usr/include/stdc-predef.h \
- /home/user/nex1/Surface-to-air-missiles/Simulator/UDPCommunicate/MFRSendUDPManager.h \
+ /home/nexuskang/FinalProject/Surface-to-air-missiles/Simulator/UDPCommunicate/MFRSendUDPManager.h \
  /usr/include/c++/11/string \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

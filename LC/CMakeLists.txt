@@ -7,6 +7,12 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_BUILD_TYPE Debug)  # 기본 빌드 타입을 Debug로 설정
 set(CMAKE_CXX_FLAGS_DEBUG "-g")  # -g 플래그로 디버깅 정보 포함
 
+find_package(Eigen3 CONFIG REQUIRED)
+
+if (NOT Eigen3_FOUND)
+    message(FATAL_ERROR "Eigen3 not found! Please check Eigen3_DIR path in CMakeLists.txt: ${Eigen3_DIR}")
+endif()
+
 # Define include directories
 include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/core
@@ -17,6 +23,7 @@ include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/status
     ${CMAKE_CURRENT_SOURCE_DIR}/inih
     ${CMAKE_CURRENT_SOURCE_DIR}/Config
+    ${CMAKE_CURRENT_SOURCE_DIR}/CalcAlgo
 )
 
 # Set the output directory for the executable
@@ -42,6 +49,12 @@ add_executable(lc
     comm/common/MessageParser.cpp
     comm/common/Serializer.cpp
 
+    # ECEF 변환 유틸리티 추가
+    CalcAlgo/GeolocationConverter.cpp # <--- 이 줄을 추가
+
     # External library
     inih/ini.c
 )
+target_link_libraries(lc PUBLIC Eigen3::Eigen)
+
+
