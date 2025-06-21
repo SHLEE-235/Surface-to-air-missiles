@@ -44,10 +44,10 @@ void LSStatusManager::init(const std::string& launcherConfigPath)
 
         // Motor 핀 설정 읽기
         std::string motorType = ConfigParser::getValue("Motor", "Type", launcherConfigPath);
-        std::string canInterface = ConfigParser::getValue("Motor", "CAN_Interface", launcherConfigPath);
-        uint32_t canId = static_cast<uint32_t>(ConfigParser::getInt("Motor", "CAN_ID", launcherConfigPath));
+        std::string device = ConfigParser::getValue("Motor", "Device", launcherConfigPath);
+        uint32_t uartBaudRate = static_cast<uint32_t>(ConfigParser::getInt("Motor", "BaudRate", launcherConfigPath));
 
-        motorManager = MotorManagerFactory::create(motorType, canInterface, canId);
+        motorManager = MotorManagerFactory::create(motorType, device, uartBaudRate);
 
         std::cout << "[LSStatusManager] Initialized from config: " << launcherConfigPath << "\n";
 
@@ -218,10 +218,8 @@ bool LSStatusManager::rotateToAngle(double targetAngle)
         return false;
     }
 
-    double currentAngle = status.angle;
-
     // 성공 여부 판단
-    bool success = motorManager->rotateToAngle(currentAngle, targetAngle);
+    bool success = motorManager->rotateToAngle(targetAngle);
 
     if (success)
     {

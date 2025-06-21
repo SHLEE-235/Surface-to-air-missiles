@@ -1,6 +1,7 @@
 #pragma once
 #include "info.h"
-
+#include <string>
+#include <termios.h>
 #pragma pack(push, 1)
 
 struct Pos3D {
@@ -15,6 +16,9 @@ struct LSStatus {
     double angle;
     int speed;
     OperationMode mode;
+
+    std::string device;
+    int uartBaudRate = B9600;
 };
 
 #pragma pack(pop)

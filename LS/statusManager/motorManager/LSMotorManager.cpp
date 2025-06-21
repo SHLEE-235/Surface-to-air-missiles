@@ -1,164 +1,82 @@
 #include "LSMotorManager.h"
-#include <cmath>
+#include <fcntl.h>
+#include <unistd.h>
+#include <termios.h>
 #include <iostream>
 #include <cstring>
-#include <unistd.h>
-#include <fcntl.h>
-#include <sys/socket.h>
-#include <net/if.h>
-#include <linux/can.h>
-#include <linux/can/raw.h>
-#include <sys/ioctl.h>
-
-LSMotorManager::LSMotorManager(const std::string& canInterface, uint32_t id)
-    : canId(id)
+#include <cstdint>
+#include <sstream>
+#include <iomanip>
+LSMotorManager::LSMotorManager(std::string& device, int& uartBaudRate)
 {
-    initCAN(canInterface);
+    this->device = device;
+    this->uartBaudRate = static_cast<speed_t>(uartBaudRate);
+    if(!initUart())
+    {
+        std::cerr << "[StepMotorController::initUart] Uart Init Failed" << std::endl;
+    }
 }
 
 LSMotorManager::~LSMotorManager()
 {
-    if (canSocket >= 0)
-        close(canSocket);
-}
-
-void LSMotorManager::initCAN(const std::string& canInterface)
-{
-    canSocket = socket(PF_CAN, SOCK_RAW, CAN_RAW);
-    if (canSocket < 0)
+    if (uart_fd >= 0)
     {
-        perror("socket");
-        throw std::runtime_error("CAN socket creation failed");
+        close(uart_fd);
     }
+}
 
-    struct ifreq ifr;
-    std::strncpy(ifr.ifr_name, canInterface.c_str(), IFNAMSIZ - 1);
-    if (ioctl(canSocket, SIOCGIFINDEX, &ifr) < 0)
+bool LSMotorManager::initUart()
+{
+     uart_fd = open(device.c_str(), O_RDWR | O_NOCTTY | O_SYNC);
+    if (uart_fd < 0)
     {
-        perror("ioctl");
-        throw std::runtime_error("CAN interface error");
+        std::cerr << "[UART] Failed to open device " << device << std::endl;
+        return false;
     }
 
-    struct sockaddr_can addr {};
-    addr.can_family = AF_CAN;
-    addr.can_ifindex = ifr.ifr_ifindex;
-
-    if (bind(canSocket, (struct sockaddr*)&addr, sizeof(addr)) < 0)
+    struct termios tty;
+    if (tcgetattr(uart_fd, &tty) != 0)
     {
-        perror("bind");
-        throw std::runtime_error("CAN bind error");
+        std::cerr << "[UART] Error getting termios attributes" << std::endl;
+        return false;
     }
 
-    std::cout << "[LSMotorManager] CAN socket opened on " << canInterface << ", ID=0x"
-              << std::hex << canId << std::dec << "\n";
-}
+    cfsetospeed(&tty, uartBaudRate);
+    cfsetispeed(&tty, uartBaudRate);
 
-std::pair<bool, double> LSMotorManager::computeShortestRotation(double current, double target)
-{
-    current = std::fmod(current, 360.0);
-    if (current < 0) current += 360.0;
+    tty.c_cflag = (tty.c_cflag & ~CSIZE) | CS8; // 8-bit chars
+    tty.c_iflag &= ~IGNBRK;                     // disable break processing
+    tty.c_lflag = 0;                            // no signaling chars, no echo
+    tty.c_oflag = 0;                            // no remapping, no delays
+    tty.c_cc[VMIN] = 1;                         // read blocks
+    tty.c_cc[VTIME] = 1;                        // timeout 0.1s
 
-    target = std::fmod(target, 360.0);
-    if (target < 0) target += 360.0;
+    tty.c_iflag &= ~(IXON | IXOFF | IXANY); // shut off xon/xoff ctrl
+    tty.c_cflag |= (CLOCAL | CREAD);        // ignore modem controls
+    tty.c_cflag &= ~(PARENB | PARODD);      // no parity
+    tty.c_cflag &= ~CSTOPB;                 // 1 stop bit
+    tty.c_cflag &= ~CRTSCTS;                // no hardware flow control
 
-    double diff = target - current;
-    if (diff > 180.0) diff -= 360.0;
-    else if (diff < -180.0) diff += 360.0;
-
-    bool clockwise = diff < 0;
-    double degrees = std::abs(diff);
-
-    return {clockwise, degrees};
-}
-
-bool LSMotorManager::rotateToAngle(double currentAngle, double targetAngle)
-{
-    auto [clockwise, degrees] = computeShortestRotation(currentAngle, targetAngle);
-
-    uint16_t speedRPM = 320;
-    uint8_t acceleration = 2;
-    uint32_t pulses = static_cast<uint32_t>(degrees / DEGREE_PER_STEP);
-
-    auto frame = buildPositionModeFrame(clockwise, speedRPM, acceleration, pulses);
-    sendCanFrame(frame);
-
-    std::cout << "[LSMotorManager] rotateToAngle(): current=" << currentAngle
-              << "°, target=" << targetAngle << "°, CW=" << clockwise
-              << ", pulses=" << pulses << "\n";
-
-    bool success = receiveStatus();
-    if (!success) {
-        std::cerr << "[LSMotorManager] Motor did not confirm rotation complete.\n";
-    }
-    return success;
-}
-
-std::vector<uint8_t> LSMotorManager::buildPositionModeFrame(bool clockwise, uint16_t speed, uint8_t acc, uint32_t pulses)
-{
-    uint8_t dir_bit = clockwise ? 0x00 : 0x80; // b7: direction (0 = CW, 1 = CCW)
-    uint8_t speed_high = dir_bit | ((speed >> 4) & 0x7F);
-    uint8_t speed_low = (speed & 0x0F) << 4;
-
-    return {
-        0xFD, // code for position mode
-        0x01, // Rev
-        speed_high,
-        speed_low,
-        acc,
-        static_cast<uint8_t>(pulses >> 16),
-        static_cast<uint8_t>(pulses >> 8),
-        static_cast<uint8_t>(pulses)
-    };
-}
-
-void LSMotorManager::sendCanFrame(const std::vector<uint8_t>& data)
-{
-    struct can_frame frame {};
-    frame.can_id = canId;
-    frame.can_dlc = data.size();
-    std::memcpy(frame.data, data.data(), data.size());
-
-    if (write(canSocket, &frame, sizeof(frame)) != sizeof(frame))
+    if (tcsetattr(uart_fd, TCSANOW, &tty) != 0)
     {
-        perror("write(CAN)");
+        std::cerr << "[UART] Error setting termios attributes" << std::endl;
+        return false;
     }
+
+    return true;
 }
 
-bool LSMotorManager::receiveStatus()
+
+bool LSMotorManager::rotateToAngle(double targetAngle)
 {
-    struct can_frame frame {};
-    constexpr int timeoutMs = 3000;
-    constexpr int sleepMs = 100;
-    int waited = 0;
-
-    while (waited < timeoutMs)
+    if (uart_fd < 0)
     {
-        int nbytes = read(canSocket, &frame, sizeof(frame));
-        if (nbytes < 0)
-        {
-            perror("read(CAN)");
-            return false;
-        }
-
-        if (frame.can_id == canId && frame.can_dlc >= 3 && frame.data[0] == 0xFD)
-        {
-            uint8_t status = frame.data[1];
-            if (status == 2)
-            {
-                std::cout << "[LSMotorManager] rotation complete (status=2)\n";
-                return true;
-            }
-            else if (status == 0)
-            {
-                std::cerr << "[LSMotorManager] rotation failed (status=0)\n";
-                return false;
-            }
-        }
-
-        usleep(sleepMs * 1000);
-        waited += sleepMs;
+        std::cerr << "[UART] UART not initialized" << std::endl;
+        return false;
     }
-
-    std::cerr << "[LSMotorManager]  receiveStatus timeout\n";
-    return false;
+    std::ostringstream oss;
+    oss << std::fixed << std::setprecision(2) << targetAngle;
+    std::string cmd = "STOP_MODE:" + oss.str() + "\n";
+    write(uart_fd, cmd.c_str(), cmd.size());
+    return true;
 }

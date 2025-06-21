@@ -1,5 +1,5 @@
 // StatusLoader.cpp
-#include "StatusLoader.h"
+/*#include "StatusLoader.h"
 #include "INIReader.h"
 #include <iostream>
 SystemStatus loadSystemStatus(const std::string& iniPath) {
@@ -70,4 +70,4 @@ SystemStatus loadSystemStatus(const std::string& iniPath) {
     return status;
 }
 
- 
+*/
