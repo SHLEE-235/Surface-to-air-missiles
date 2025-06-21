@@ -81,21 +81,25 @@ void MockTarget::sendData()
 
 bool MockTarget::downTargetStatus(const MissileInfo &missileInfo)
 {
-	const int missile_range = 100; // m 기준
+	const int missile_range = 200; // m 기준
 
 	// 위도/경도 간 거리 차이(m) 계산
 	double lat1 = static_cast<double>(missileInfo.x) / DEGREE_TO_INT;
 	double lon1 = static_cast<double>(missileInfo.y) / DEGREE_TO_INT;
+	double alt1 = static_cast<double>(missileInfo.z);
+	
 	double lat2 = static_cast<double>(target_info_.x) / DEGREE_TO_INT;
 	double lon2 = static_cast<double>(target_info_.y) / DEGREE_TO_INT;
+	double alt2 = static_cast<double>(target_info_.z);
 
 	double avg_lat = (lat1 + lat2) / 2.0;
 	double meters_per_deg_lon = METERS_PER_DEGREE_LAT * std::cos(avg_lat * M_PI / 180.0);
 
 	double dx = (lon1 - lon2) * meters_per_deg_lon;
 	double dy = (lat1 - lat2) * METERS_PER_DEGREE_LAT;
+	double dz = alt1 - alt2;
 
-	double distance = std::sqrt(dx * dx + dy * dy);
+	double distance = std::sqrt(dx * dx + dy * dy + dz * dz);
 
 	if (distance <= missile_range)
 	{
