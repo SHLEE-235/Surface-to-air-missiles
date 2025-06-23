@@ -555,6 +555,46 @@ void LCManager::onRadarDetectionReceived(const Common::RadarDetection &d)
     updateStatus(targets);
     std::cout << "[MFR] 타겟 정보 갱신 완료 (총 " << targets.size() << "개)\n";
 
+    // ✅ 현재 추적 중인 타겟이 사라졌는지 확인
+    unsigned int lockedId = getLockedTargetId();
+    if (lockedId != 0)
+    {
+        bool stillExists = std::any_of(targets.begin(), targets.end(), [&](const auto &t) {
+            return t.id == lockedId;
+        });
+
+        if (!stillExists)
+        {
+            std::cout << "[LC] 추적 타겟 ID " << lockedId << " 소실 → 레이더 회전 모드 전환\n";
+
+            // 0x12 + radarId + radarMode(0x02) + flag(0x00) + targetId(0)
+            std::vector<uint8_t> packet;
+            packet.push_back(0x12);
+
+            unsigned int radarId = getStatusCopy().mfr.mfrId;
+            packet.push_back(radarId & 0xFF);
+            packet.push_back((radarId >> 8) & 0xFF);
+            packet.push_back((radarId >> 16) & 0xFF);
+            packet.push_back((radarId >> 24) & 0xFF);
+
+            packet.push_back(0x02); // ROTATE
+            packet.push_back(0x00); // flag
+            for (int i = 0; i < 4; ++i) packet.push_back(0); // targetId = 0
+
+            if (hasMFRSender())
+            {
+                sendToMFR(packet);
+                std::cout << "[LC] 회전 모드 전환 전송 완료 → radarId=" << radarId << "\n";
+            }
+            else
+            {
+                std::cerr << "[LC] MFR 송신자 없음 → 회전 모드 전송 실패\n";
+            }
+
+            setLockedTargetId(0); // 타겟 추적 해제
+        }
+    }
+
     std::vector<MissileStatus> missiles;
     for (const auto &m : d.missiles)
     {
@@ -570,8 +610,6 @@ void LCManager::onRadarDetectionReceived(const Common::RadarDetection &d)
         missiles.push_back(ms);
     }
     updateStatus(missiles);
-    static int detectionCounter = 0;
-    detectionCounter++;
     // 미사일 정보 출력
     // if(detectionCounter%10==0){
     //     std::cout << "[MFR] 미사일 정보 (총 " << missiles.size() << "개)\n";
@@ -591,6 +629,7 @@ void LCManager::onRadarDetectionReceived(const Common::RadarDetection &d)
         //   << ", 미사일 " << missiles.size() << ")\n";
     }
 }
+
 
 void LCManager::setConsoleSender(std::shared_ptr<IStatusSender> sender)
 {

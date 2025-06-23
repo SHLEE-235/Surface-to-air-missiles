@@ -68,40 +68,34 @@ CommonMessage parseRadarCommand(const std::vector<uint8_t>& data, CommonMessage&
 }
 
 CommonMessage parseLSStatus(const std::vector<uint8_t>& data, CommonMessage& msg) {
-    // if (data.size() < 34) {  // 1 (cmd) + 33
-    //     msg.ok = false;
-    //     return msg;
-    // }
+    // 최소 길이 검증
+    if (data.size() < 42) {  // 1 + 4 + 8 + 8 + 8 + 8 + 4 + 1
+        msg.ok = false;
+        return msg;
+    }
 
     LSReport ls;
-    ls.lsId  = be32toh(&data[1]);
-    ls.posX  = be64toh(&data[5]);
-    ls.posY  = be64toh(&data[13]);
-    ls.height = be64toh(&data[21]);  // ✅ height 추가
 
-    unsigned long angleBits = be64toh(&data[29]);           // 위치 주의: 기존 21 → 29
+    // 리틀엔디안 시스템이라면 memcpy로 그대로 복사하면 됨
+    std::memcpy(&ls.lsId,   &data[1],  sizeof(uint32_t));
+    std::memcpy(&ls.posX,   &data[5],  sizeof(int64_t));
+    std::memcpy(&ls.posY,   &data[13], sizeof(int64_t));
+    std::memcpy(&ls.height, &data[21], sizeof(int64_t));
+
+    unsigned long angleBits;
+    std::memcpy(&angleBits, &data[29], sizeof(unsigned long));
     std::memcpy(&ls.launchAngle, &angleBits, sizeof(double));
 
-    ls.speed = be32toh(&data[37]);                     // 위치 주의: 기존 29 → 37
-    ls.mode  = static_cast<OperationMode>(data[41]);   // 위치 주의: 기존 33 → 41
+    std::memcpy(&ls.speed, &data[37], sizeof(uint32_t));
 
-    // LSReport 디버깅
-    // {
-    //     std::cout << "LSReport 디버깅:" << std::endl;
-    //     std::cout << "  lsId  : " << ls.lsId << std::endl;
-    //     std::cout << "  posX  : " << std::hex << ls.posX << std::endl;
-    //     std::cout << "  posY  : " << std::hex << ls.posY << std::endl;
-    //     std::cout << "  angle : " << std::dec << ls.angle << std::endl;
-    //     std::cout << "  speed : " << std::dec << ls.speed << std::endl; // 10진수로 출력
-    //     std::cout << "  mode  : " << static_cast<int>(ls.mode) << std::endl;                
-    // }
+    ls.mode = static_cast<OperationMode>(data[41]);
 
+    // 구성
     msg.payload = ls;
     msg.commandType = static_cast<CommandType>(data[0]);
     msg.ok = true;
     return msg;
 }
-
 
 CommonMessage parseLauncherCommand(const std::vector<uint8_t>& data, CommonMessage& msg) {
     if (data.size() < 6) { // cmd(1) + lsId(4) + lsMode(1)

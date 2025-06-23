@@ -113,46 +113,26 @@ void LSStatusManager::serializeStatus(std::vector<uint8_t> &out) const
     uint8_t commandType = 0x41;
     append(&commandType, sizeof(commandType));
 
-    // ID (uint32_t → network byte order)
-    uint32_t net_id = htonl(s.id);
-    append(&net_id, sizeof(net_id));
+    // ID (uint32_t - 그대로 저장: 리틀엔디안)
+    append(&s.id, sizeof(s.id));
 
-    // Position X/Y (int64_t → big-endian)
-    int64_t net_x = static_cast<int64_t>(bswap_64(static_cast<unsigned long>(s.position.x)));
-    int64_t net_y = static_cast<int64_t>(bswap_64(static_cast<unsigned long>(s.position.y)));
-    int64_t net_z = static_cast<int64_t>(bswap_64(static_cast<unsigned long>(s.position.z)));
-    append(&net_x, sizeof(net_x));
-    append(&net_y, sizeof(net_y));
-    append(&net_z, sizeof(net_z));
+    // Position X/Y/Z (int64_t - 그대로 저장: 리틀엔디안)
+    append(&s.position.x, sizeof(s.position.x));
+    append(&s.position.y, sizeof(s.position.y));
+    append(&s.position.z, sizeof(s.position.z));
 
-    // Angle (double → unsigned long로 reinterpret 후 big-endian 변환)
-    unsigned long angle_raw;
-    std::memcpy(&angle_raw, &s.angle, sizeof(s.angle));
-    unsigned long net_angle = bswap_64(angle_raw);
-    append(&net_angle, sizeof(net_angle));
+    // Angle (double → 그대로 저장: 리틀엔디안)
+    append(&s.angle, sizeof(s.angle));
 
-    // Speed (int → uint32_t → htonl)
-    uint32_t net_speed = htonl(static_cast<uint32_t>(s.speed));
-    append(&net_speed, sizeof(net_speed));
+    // Speed (int → uint32_t로 명시적 캐스팅 후 저장)
+    uint32_t speedLE = static_cast<uint32_t>(s.speed);
+    append(&speedLE, sizeof(speedLE));
 
-    // Mode (OperationMode → uint8_t)
+    // Mode
     uint8_t mode_byte = static_cast<uint8_t>(s.mode);
     append(&mode_byte, sizeof(mode_byte));
-
-    // 디버그 출력
-    /*
-    std::cout << std::hex;
-    std::cout << "commandType: 0x" << static_cast<int>(commandType) << std::endl;
-    std::cout << "id: 0x" << s.id << std::endl;
-    std::cout << "position.x: 0x" << s.position.x << std::endl;
-    std::cout << "position.y: 0x" << s.position.y << std::endl;
-    std::cout << "position.z: 0x" << s.position.z << std::endl;
-    std::cout << "angle: 0x" << angle_raw << std::endl;
-    std::cout << "speed: 0x" << s.speed << std::endl;
-    std::cout << "mode: 0x" << static_cast<int>(s.mode) << std::endl;
-    std::cout << std::dec;
-    */
 }
+
 
 void LSStatusManager::moveLS(long long x, long long y)
 {

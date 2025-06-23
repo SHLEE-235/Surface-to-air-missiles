@@ -186,7 +186,7 @@ void Mfr::mfrDetectionAlgo()
                     status.targetAngle2 = target.angle2;
                     status.firstDetectionTime = nowMs;
                     status.prioirty = 1;
-                    status.isHit = false;
+                    status.isHit = target.isHit;
 
                     detectedTargetList.push_back(status);
                 }
@@ -213,7 +213,7 @@ void Mfr::mfrDetectionAlgo()
                     status.missileSpeed = missile.speed;
                     status.missileAngle = missile.angle;
                     status.firstDetectionTime = nowMs;
-                    status.isHit = false;
+                    status.isHit = missile.isHit;
 
                     detectedMissileList.push_back(status);
                 }
